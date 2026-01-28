@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-04/schema",
   "$id": "https://dowloads.spansh.co.uk/schema/galaxy.schema.json",
   "title": "Spansh Galaxy",
   "description": "Full Galaxy files downloaded from https://spansh.co.uk/downloads",
-  "$defs": {
+  "definitions": {
     "Power": {
       "type": [
         "null",
@@ -100,7 +100,7 @@
           "type": "object",
           "properties": {
             "signals": {
-              "$ref": "#/$defs/ValueMapping"
+              "$ref": "#/definitions/ValueMapping"
             },
             "updateTime": {
               "description": "The timestamp that the signals were last updated, in UTC.",
@@ -184,13 +184,13 @@
         },
         "timestamps": {
           "description": "Timestamps of the last update of some of the fields within the body.",
-          "$ref": "#/$defs/Timestamps"
+          "$ref": "#/definitions/Timestamps"
         },
         "stations": {
           "description": "Stations which are located on the body, planet based stations.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/Station"
+            "$ref": "#/definitions/Station"
           }
         },
         "updateTime": {
@@ -263,7 +263,7 @@
           "description": "Parents of the body, mapping each parent body type to it's ID within the system.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/ValueMapping"
+            "$ref": "#/definitions/ValueMapping"
           }
         },
         "isLandable": {
@@ -305,11 +305,11 @@
         },
         "atmosphereComposition": {
           "description": "Planets only.  Atmosphere composition of the planet, mapping each element to it's percentage.",
-          "$ref": "#/$defs/ValueMapping"
+          "$ref": "#/definitions/ValueMapping"
         },
         "solidComposition": {
           "description": "Planets only.  Solid composition of the planet, mapping each element to it's percentage.",
-          "$ref": "#/$defs/ValueMapping"
+          "$ref": "#/definitions/ValueMapping"
         },
         "terraformingState": {
           "description": "Planets only.  terraforming state of the planet.",
@@ -318,14 +318,14 @@
         },
         "materials": {
           "description": "Planets only.  Materials which can be found on the planet, mapping each material to it's percentage.",
-          "$ref": "#/$defs/ValueMapping"
+          "$ref": "#/definitions/ValueMapping"
         },
         "signals": {
           "description": "Planets only.  The signals that can be found on the planet.",
           "type": "object",
           "properties": {
             "signals": {
-              "$ref": "#/$defs/ValueMapping"
+              "$ref": "#/definitions/ValueMapping"
             },
             "updateTime": {
               "description": "The timestamp that the signals were last updated, in UTC.",
@@ -352,14 +352,14 @@
           "description": "Rings associated with the body.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/BeltOrRing"
+            "$ref": "#/definitions/BeltOrRing"
           }
         },
         "belts": {
           "description": "Belts associated with the body.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/BeltOrRing"
+            "$ref": "#/definitions/BeltOrRing"
           }
         }
       },
@@ -414,23 +414,23 @@
         },
         "primaryEconomy": {
           "description": "Primary economy for the station.",
-          "$ref": "#/$defs/Economy"
+          "$ref": "#/definitions/Economy"
         },
         "secondaryEconomy": {
           "description": "Secondary economy for the station.",
-          "$ref": "#/$defs/Economy"
+          "$ref": "#/definitions/Economy"
         },
         "economies": {
           "description": "All econommies for the station, mapping each economy as a proportion of the stations economies.",
-          "$ref": "#/$defs/ValueMapping"
+          "$ref": "#/definitions/ValueMapping"
         },
         "allegiance": {
           "description": "Allegiance of the station.",
-          "$ref": "#/$defs/Allegiance"
+          "$ref": "#/definitions/Allegiance"
         },
         "government": {
           "description": "Government type of the station.",
-          "$ref": "#/$defs/Government"
+          "$ref": "#/definitions/Government"
         },
         "services": {
           "description": "Servies provided by the station.",
@@ -701,7 +701,6 @@
         },
         "coords": {
           "description": "Coordinates of the system.",
-          "type": "string",
           "type": "object",
           "properties": {
             "x": {
@@ -726,19 +725,19 @@
         },
         "allegiance": {
           "description": "Allegiance of the system.",
-          "$ref": "#/$defs/Allegiance"
+          "$ref": "#/definitions/Allegiance"
         },
         "government": {
           "description": "Government type of the system.",
-          "$ref": "#/$defs/Government"
+          "$ref": "#/definitions/Government"
         },
         "primaryEconomy": {
           "description": "Primary economy for the system.",
-          "$ref": "#/$defs/Economy"
+          "$ref": "#/definitions/Economy"
         },
         "secondaryEconomy": {
           "description": "Secondary economy for the system.",
-          "$ref": "#/$defs/Economy"
+          "$ref": "#/definitions/Economy"
         },
         "security": {
           "description": "Security rating of the system.",
@@ -764,14 +763,14 @@
           "description": "All bodies of the system.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/Body"
+            "$ref": "#/definitions/Body"
           }
         },
         "stations": {
           "description": "All space based stations of the system.",
           "type": "array",
           "items": {
-            "$ref": "#/$defs/Station"
+            "$ref": "#/definitions/Station"
           }
         },
         "controllingFaction": {
@@ -784,15 +783,15 @@
             },
             "state": {
               "description": "State of the controlling faction of the system.",
-              "$ref": "#/$defs/FactionState"
+              "$ref": "#/definitions/FactionState"
             },
             "government": {
               "description": "Government type of the controlling faction of the system.",
-              "$ref": "#/$defs/Government"
+              "$ref": "#/definitions/Government"
             },
             "allegiance": {
               "description": "Allegiance of the controlling faction of the system.",
-              "$ref": "#/$defs/Allegiance"
+              "$ref": "#/definitions/Allegiance"
             }
           },
           "required": [
@@ -812,11 +811,11 @@
               },
               "allegiance": {
                 "description": "Allegiance of the faction.",
-                "$ref": "#/$defs/Allegiance"
+                "$ref": "#/definitions/Allegiance"
               },
               "government": {
                 "description": "Government type of the faction.",
-                "$ref": "#/$defs/Government"
+                "$ref": "#/definitions/Government"
               },
               "influence": {
                 "description": "Influence of the faction.",
@@ -826,7 +825,7 @@
               },
               "state": {
                 "description": "State of the faction.",
-                "$ref": "#/$defs/FactionState"
+                "$ref": "#/definitions/FactionState"
               }
             },
             "required": [
@@ -837,7 +836,7 @@
         },
         "powerState": {
           "description": "State of the controlling power of the system.",
-          "$ref": "#/$defs/PowerState"
+          "$ref": "#/definitions/PowerState"
         },
         "powerConflictProgress": {
           "type": "array",
@@ -845,7 +844,7 @@
             "type": "object",
             "properties": {
               "power": {
-                "$ref": "#/$defs/Power"
+                "$ref": "#/definitions/Power"
               },
               "progress": {
                 "description": "Progress of the power in the conflict.",
@@ -866,15 +865,15 @@
           "type": "array",
           "items": {
             "description": "Name of the powers.",
-            "$ref": "#/$defs/Power"
+            "$ref": "#/definitions/Power"
           }
         },
         "timestamps": {
-          "$ref": "#/$defs/Timestamps"
+          "$ref": "#/definitions/Timestamps"
         },
         "controllingPower": {
           "description": "Name of the controlling power of the system.",
-          "$ref": "#/$defs/Power"
+          "$ref": "#/definitions/Power"
         },
         "powerStateControlProgress": {
           "description": "Progress of the controlling power in controlling the system.",
@@ -915,6 +914,6 @@
   },
   "type": "array",
   "items": {
-    "$ref": "#/$defs/System"
+    "$ref": "#/definitions/System"
   }
 }

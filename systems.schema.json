@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-0r47/schema",
   "$id": "https://dowloads.spansh.co.uk/schema/systems.schema.json",
   "title": "Spansh Systems",
   "description": "Full Systems files downloaded from https://spansh.co.uk/downloads",
-  "$defs": {
+  "definitions": {
     "System": {
       "type": "object",
       "properties": {
@@ -67,6 +67,6 @@
   },
   "type": "array",
   "items": {
-    "$ref": "#/$defs/System"
+    "$ref": "#/definitions/System"
   }
 }
