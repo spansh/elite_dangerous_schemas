@@ -11,8 +11,8 @@ These schema files can be used to validate the data which can be downloaded from
 
 However, specific versions of each of these schemas can be downloaded via the following links.
 
-* https://downloads.spansh.co.uk/schemas/\<version\>/galaxy.schema.json
-* https://downloads.spansh.co.uk/schemas/\<version\>/systems.schema.json
+* <https://downloads.spansh.co.uk/schemas/[version]/galaxy.schema.json>
+* <https://downloads.spansh.co.uk/schemas/[version]/systems.schema.json>
 
 For example
 
