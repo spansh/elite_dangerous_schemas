@@ -31,8 +31,12 @@ I do also have a C++ schema validator using [RapidJSON](https://rapidjson.org/md
 
 ## Version History
 
+Patch versions will only ever add entries to enum fields, minor versions may add new fields, major versions will contain breaking changes.
+
 * 1.0.1
     * Initial Release
+* 1.0.2
+    * Switch to draft 4 of JSON Schema
 
 ## See Also
 
