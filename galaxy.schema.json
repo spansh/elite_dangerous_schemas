@@ -4,6 +4,14 @@
   "title": "Spansh Galaxy",
   "description": "Full Galaxy files downloaded from https://spansh.co.uk/downloads",
   "definitions": {
+    "ThargoidState": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "enum": [null,"Thargoid Controlled","Thargoid Harvest","Thargoid Probing","Thargoid Recovery","Thargoid Stronghold"]
+    },
+
     "Power": {
       "type": [
         "null",
@@ -880,8 +888,7 @@
             "null",
             "number"
           ],
-          "minimum": 0,
-          "maximum": 1
+          "minimum": 0
         },
         "powerStateReinforcement": {
           "description": "Progress of the controlling power in reinforcing the system.",
@@ -899,6 +906,44 @@
             "number"
           ],
           "minimum": 0
+        },
+        "thargoidWar": {
+          "description": "State of the Thargoid war in this system.",
+          "type": "object",
+          "properties": {
+            "currentState": {
+              "description": "Current Thargoid state in this system.",
+              "$ref": "#/definitions/ThargoidState"
+            },
+            "successState": {
+              "description": "Thargoid state in this system if the war is won by the players.",
+              "$ref": "#/definitions/ThargoidState"
+            },
+            "failureState": {
+              "description": "Thargoid state in this system if the war is lost by the players.",
+              "$ref": "#/definitions/ThargoidState"
+            },
+            "progress": {
+              "description": "Progress of the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "daysRemaining": {
+              "description": "Days remaining of the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0
+            },
+            "portsRemaining": {
+              "description": "Posrts remaining in the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0
+            },
+            "successReached": {
+              "description": "Have the players won the Thargoid war in this system.",
+              "type": "boolean"
+            }
+          }
         }
       },
       "required": [
