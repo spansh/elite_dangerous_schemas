@@ -37,7 +37,7 @@ Patch versions will only ever add entries to enum fields, minor versions may add
     * Initial Release
 * 1.0.2
     * Switch to draft 4 of JSON Schema
-* 1.1.0
+* 1.2.0
     * Add enum to genuses, remove maximum from powerConflictProgress
 
 ## See Also
