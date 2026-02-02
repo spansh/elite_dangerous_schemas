@@ -406,10 +406,13 @@
         },
         "controllingFaction": {
           "description": "Controlling faction of the station.",
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "controllingFactionState": {
-          "description": "Statre of the controlling faction of the station.",
+          "description": "State of the controlling faction of the station.",
           "type": [
             "null",
             "string"
@@ -887,8 +890,7 @@
           "type": [
             "null",
             "number"
-          ],
-          "minimum": 0
+          ]
         },
         "powerStateReinforcement": {
           "description": "Progress of the controlling power in reinforcing the system.",
