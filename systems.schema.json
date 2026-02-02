@@ -23,7 +23,6 @@
         },
         "coords": {
           "description": "Coordinates of the system.",
-          "type": "string",
           "type": "object",
           "properties": {
             "x": {
