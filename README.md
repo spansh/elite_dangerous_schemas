@@ -47,6 +47,8 @@ Major versions will contain breaking changes.
     * Fix typo in description
     * Allow nulls for controllingFaction 
     * Rremoved minimum value for powerStateControlProgress
+* 1.4.0
+    * Fixed extra type declaration
 
 ## See Also
 
