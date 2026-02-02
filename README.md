@@ -31,7 +31,9 @@ I do also have a C++ schema validator using [RapidJSON](https://rapidjson.org/md
 
 ## Version History
 
-Patch versions will only ever add entries to enum fields, minor versions may add new fields, major versions will contain breaking changes.
+Patch versions will only ever add entries to enum fields, reduce validation rules or correct typographical errors.
+Minor versions may add new fields.
+Major versions will contain breaking changes.
 
 * 1.0.1
     * Initial Release
@@ -39,6 +41,12 @@ Patch versions will only ever add entries to enum fields, minor versions may add
     * Switch to draft 4 of JSON Schema
 * 1.2.0
     * Add enum to genuses, remove maximum from powerConflictProgress
+* 1.3.0
+    * Added mostly deprecated Thargoid fields
+* 1.3.1
+    * Fix typo in description
+    * Allow nulls for controllingFaction 
+    * Rremoved minimum value for powerStateControlProgress
 
 ## See Also
 
