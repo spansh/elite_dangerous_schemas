@@ -49,6 +49,9 @@ Major versions will contain breaking changes.
     * Rremoved minimum value for powerStateControlProgress
 * 1.4.0
     * Fixed extra type declaration
+* 1.5.0
+    * Added new faction state fields
+    * Consolidated faction definition
 
 ## See Also
 

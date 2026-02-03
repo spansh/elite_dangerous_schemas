@@ -27,8 +27,76 @@
       "enum": [null,"Exploited","Fortified","Stronghold","Unoccupied"]
     },
     "FactionState": {
-      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
       "enum": [null,"Blight","Boom","Bust","Civil Liberty","Civil Unrest","Civil War","Drought","Election","Expansion","Famine","Infrastructure Failure","Investment","Lockdown","Natural Disaster","None","Outbreak","Pirate Attack","Public Holiday","Retreat","Terrorist Attack","War"]
+    },
+    "CurrentFactionState": {
+      "description": "Current states for a faction.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "description": "Actual state of the state.",
+            "$ref": "#/definitions/FactionState"
+          },
+          "trend": {
+            "description": "Trend of the state of the faction.",
+            "type": "number"
+          }
+        },
+        "required": [
+          "state"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "FactionDetails": {
+      "description": "Full faction state",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the controlling faction of the system.",
+          "type": "string"
+        },
+        "state": {
+          "description": "State of the controlling faction of the system.",
+          "$ref": "#/definitions/FactionState"
+        },
+        "allegiance": {
+          "description": "Allegiance of the controlling faction of the system.",
+          "$ref": "#/definitions/Allegiance"
+        },
+        "government": {
+          "description": "Government type of the controlling faction of the system.",
+          "$ref": "#/definitions/Government"
+        },
+        "influence": {
+          "description": "Influence of the faction.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "activeStates": {
+          "description": "Currently active states for this faction.",
+          "$ref": "#/definitions/CurrentFactionState"
+        },
+        "pendingStates": {
+          "description": "Pending states for this faction.",
+          "$ref": "#/definitions/CurrentFactionState"
+        },
+        "recoveringStates": {
+          "description": "Recovering states for this faction.",
+          "$ref": "#/definitions/CurrentFactionState"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
     },
     "Government": {
       "type": [
@@ -413,11 +481,7 @@
         },
         "controllingFactionState": {
           "description": "State of the controlling faction of the station.",
-          "type": [
-            "null",
-            "string"
-          ],
-          "enum": [null,"Blight","Boom","Bust","Civil Liberty","Civil Unrest","Civil War","Drought","Election","Expansion","Famine","Infrastructure Failure","Investment","Lockdown","Natural Disaster","Outbreak","Pirate Attack","Public Holiday","Retreat","Terrorist Attack","War"]
+          "$ref": "#/definitions/FactionState"
         },
         "distanceToArrival": {
           "description": "Distance to the system arrival point of the station, measured in Kilometres.",
@@ -786,63 +850,13 @@
         },
         "controllingFaction": {
           "description": "Controlling faction of the system.",
-          "type": "object",
-          "properties": {
-            "name": {
-              "description": "Name of the controlling faction of the system.",
-              "type": "string"
-            },
-            "state": {
-              "description": "State of the controlling faction of the system.",
-              "$ref": "#/definitions/FactionState"
-            },
-            "government": {
-              "description": "Government type of the controlling faction of the system.",
-              "$ref": "#/definitions/Government"
-            },
-            "allegiance": {
-              "description": "Allegiance of the controlling faction of the system.",
-              "$ref": "#/definitions/Allegiance"
-            }
-          },
-          "required": [
-            "name"
-          ],
-          "additionalProperties": false
+          "$ref": "#/definitions/FactionDetails"
         },
         "factions": {
           "description": "All factions with influence in the system.",
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "description": "Name of the faction.",
-                "type": "string"
-              },
-              "allegiance": {
-                "description": "Allegiance of the faction.",
-                "$ref": "#/definitions/Allegiance"
-              },
-              "government": {
-                "description": "Government type of the faction.",
-                "$ref": "#/definitions/Government"
-              },
-              "influence": {
-                "description": "Influence of the faction.",
-                "type": "number",
-                "minimum": 0,
-                "maximum": 1
-              },
-              "state": {
-                "description": "State of the faction.",
-                "$ref": "#/definitions/FactionState"
-              }
-            },
-            "required": [
-              "name"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/FactionDetails"
           }
         },
         "powerState": {
