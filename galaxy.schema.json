@@ -59,19 +59,19 @@
       "type": "object",
       "properties": {
         "name": {
-          "description": "Name of the controlling faction of the system.",
+          "description": "Name of the faction of the system.",
           "type": "string"
         },
         "state": {
-          "description": "State of the controlling faction of the system.",
+          "description": "State of the faction of the system.",
           "$ref": "#/definitions/FactionState"
         },
         "allegiance": {
-          "description": "Allegiance of the controlling faction of the system.",
+          "description": "Allegiance of the faction of the system.",
           "$ref": "#/definitions/Allegiance"
         },
         "government": {
-          "description": "Government type of the controlling faction of the system.",
+          "description": "Government type of the faction of the system.",
           "$ref": "#/definitions/Government"
         },
         "influence": {
@@ -916,7 +916,6 @@
         },
         "powerStateUndermining": {
           "description": "Progress of the controlling power in losing the system.",
-          "type": "number",
           "type": [
             "null",
             "number"
