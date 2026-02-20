@@ -52,6 +52,9 @@ Major versions will contain breaking changes.
 * 1.5.0
     * Added new faction state fields
     * Consolidated faction definition
+* 1.5.1
+    * Updated descriptions of faction states
+    * Removed duplicated type attribute
 
 ## See Also
 
