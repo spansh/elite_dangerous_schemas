@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.1.0",
   "info": {
     "title": "Spansh API",
     "description": "API documentation for [https://spansh.co.uk/api]r()https://spansh.co.uk/api).",
@@ -15,7 +15,7 @@
     "/dump": {
       "get": {
         "summary": "Fetch all relevant data for a particular system in the galaxy",
-        "response": {
+        "responses": {
           "200": {
             "description": "ok",
             "content": {
