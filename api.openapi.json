@@ -22,6 +22,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
+                  "description": "Dump of the system in the same format as the dump files available at https://spansh.co.uk/dumps",
                   "properties": {
                     "system": {
                       "$ref": "#/components/schemas/DumpSystem"
@@ -35,7 +36,16 @@
             "description": "not found",
             "content": {
               "application/json": {
-                "schema": 
+                "schema": {
+                  "type": "object",
+                  "description": "Details about the error",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error"
+                    }
+                  }
+                }
               }
             }
           }
