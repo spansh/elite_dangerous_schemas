@@ -950,7 +950,7 @@
               "minimum": 0
             },
             "portsRemaining": {
-              "description": "Posrts remaining in the Thargoid war in this system.",
+              "description": "Ports remaining in the Thargoid war in this system.",
               "type": "number",
               "minimum": 0
             },
