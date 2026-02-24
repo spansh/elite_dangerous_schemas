@@ -12,8 +12,72 @@
     }
   ],
   "paths": {
-    "/dump": {
+    "/dump/{id64}": {
       "get": {
+        "summary": "Fetch all relevant data for a particular system in the galaxy",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id64",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required": true,
+            "description": "ID64 of the system, a 64 bit unsigned integer."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Dump of the system in the same format as the dump files available at https://spansh.co.uk/dumps",
+                  "properties": {
+                    "system": {
+                      "$ref": "./model.openapi.json#/components/schemas/DumpSystem"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Details about the error",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/system/{id64}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id64",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required": true,
+            "description": "ID64 of the system, a 64 bit unsigned integer."
+          }
+        ],
         "summary": "Fetch all relevant data for a particular system in the galaxy",
         "responses": {
           "200": {
