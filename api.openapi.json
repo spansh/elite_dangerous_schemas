@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Spansh API",
-    "description": "API documentation for [https://spansh.co.uk/api]r()https://spansh.co.uk/api).",
+    "description": "API documentation for [https://spansh.co.uk/api](https://spansh.co.uk/api).",
     "version": "0.0.1"
   },
   "servers": [
