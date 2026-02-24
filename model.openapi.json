@@ -36,6 +36,10 @@
         ],
         "enum": [null,"Blight","Boom","Bust","Civil Liberty","Civil Unrest","Civil War","Drought","Election","Expansion","Famine","Infrastructure Failure","Investment","Lockdown","Natural Disaster","None","Outbreak","Pirate Attack","Public Holiday","Retreat","Terrorist Attack","War"]
       },
+      "Region": {
+        "type": "string",
+        "enum": ["Acheron","Achilles's Altar","Aquila's Halo","Arcadian Stream","Dryman's Point","Elysian Shore","Empyrean Straits","Errant Marches","Formorian Frontier","Galactic Centre","Hawking's Gap","Hieronymus Delta","Inner Orion Spur","Inner Orion-Perseus Conflux","Inner Scutum-Centaurus Arm","Izanami","Kepler's Crest","Lyra's Song","Mare Somnia","Newton's Vault","Norma Arm","Norma Expanse","Odin's Hold","Orion-Cygnus Arm","Outer Arm","Outer Orion Spur","Outer Orion-Perseus Conflux","Outer Scutum-Centaurus Arm","Perseus Arm","Ryker's Hope","Sagittarius-Carina Arm","Sanguineous Rim","Temple","Tenebrae","The Abyss","The Conduit","The Formidine Rift","The Veils","The Void","Trojan Belt","Vulcan Gate","Xibalba"]
+      },
       "CurrentFactionState": {
         "description": "Current states for a faction.",
         "type": "array",
@@ -122,6 +126,16 @@
         ],
         "enum": [null,"Agriculture","Colony","Extraction","High Tech","Industrial","Military","None","Prison","Private Enterprise","Refinery","Repair","Rescue","Service","Terraforming","Tourism"]
       },
+      "SynthesisRecipe": {
+        "description": "Name of the synthesis recipe.",
+        "type": "string",
+        "enum": ["SRV Repair","SRV Ammo","Plasma Munitions","Small Calibre Munitions","SRV Refuel","Large Calibre Munitions","Explosive Munitions","High Velocity Munitions","AFM Refill","FSD","Life Support","Limpets","AX Remote Flak Munitions","Configurable Explosive Munitions","Configurable Small Calibre Munitions","Sub-Surface Displacement Munitions","Seismic Charge Munitions"]
+      },
+      "SynthesisGrade": {
+        "description": "Grade of the synthesis recipe.",
+        "type": "string",
+        "enum": ["Basic","Standard","Premium"]
+      },
       "Timestamps": {
         "description": "Update timestamps for individual attributes, mapping attribute to last updated timestamp.",
         "type": "object",
@@ -203,6 +217,26 @@
         ],
         "additionalProperties": false
       },
+      "BodySubtype": {
+        "description": "Subtype of the body.",
+        "type": "string",
+        "enum": ["A (Blue-White super giant) Star","A (Blue-White) Star","Ammonia world","B (Blue-White super giant) Star","B (Blue-White) Star","Black Hole","C Star","CJ Star","CN Star","Class I gas giant","Class II gas giant","Class III gas giant","Class IV gas giant","Class V gas giant","Earth-like world","F (White super giant) Star","F (White) Star","G (White-Yellow super giant) Star","G (White-Yellow) Star","Gas giant with ammonia-based life","Gas giant with water-based life","Helium gas giant","Helium-rich gas giant","Herbig Ae\/Be Star","High metal content world","Icy body","K (Yellow-Orange giant) Star","K (Yellow-Orange) Star","L (Brown dwarf) Star","M (Red dwarf) Star","M (Red giant) Star","M (Red super giant) Star","MS-type Star","Metal-rich body","Neutron Star","O (Blue-White) Star","Rocky Ice world","Rocky body","S-type Star","Supermassive Black Hole","T (Brown dwarf) Star","T Tauri Star","Water giant","Water world","White Dwarf (D) Star","White Dwarf (DA) Star","White Dwarf (DAB) Star","White Dwarf (DAV) Star","White Dwarf (DAZ) Star","White Dwarf (DB) Star","White Dwarf (DBV) Star","White Dwarf (DBZ) Star","White Dwarf (DC) Star","White Dwarf (DCV) Star","White Dwarf (DQ) Star","Wolf-Rayet C Star","Wolf-Rayet N Star","Wolf-Rayet NC Star","Wolf-Rayet O Star","Wolf-Rayet Star","Y (Brown dwarf) Star"]
+      },
+      "BodyTerraformingState": {
+        "description": "Planets only.  Terraforming state of the planet.",
+        "type": "string",
+        "enum": ["Not terraformable","Terraformable","Terraformed","Terraforming"]
+      },
+      "LandmarkType": {
+        "description": "Type of the landmark.",
+        "type": "string",
+        "enum": ["Bacterium","Tussock","Stratum","Fonticulua","Frutexa","Osseus","Fungoida","Tubus","Concha","Fumarole","Cactoida","Aleoida","Gas Vent","Geyser","Lava Spout","Surface Station","Clypeus","Brain Tree","Electricae","Fumerola","Anemone","Recepta","Tubers","Bark Mounds","Metallic Crystals","Shards","Mollusc","Peduncle","Ice Crystals","Lagrange Cloud","Thargoid","Silicate Crystals","Mineral Spheres","Amphora Plant","Guardian","Crystalline Shard","Thargoid Structure","Guardian Ruin","Thargoid Barnacle","Tourist Beacon","Guardian Structure","Rhizome","Chalice Pod","Wrecked Ship","Gyre","Abandoned Base","Crashed Ship","Planets","Quadripartite","Coral Tree","Thargoid Barnacle Matrix","Toughened Spear Roots","K-Type Anomaly","T-Type Anomaly","E-Type Anomaly","Calcite Plates","P-Type Anomaly","Collared Pod","Storm Cloud","Aster","Q-Type Anomaly","L-Type Anomaly","Radicoida","Void","Stolon"]
+      },
+      "LandmarkSubtype": {
+        "description": "Subtype of the landmark.",
+        "type": "string",
+        "enum": ["Bacterium Aurasus","Stratum Tectonicas","Bacterium Vesicula","Bacterium Alcyoneum","Bacterium Cerbrus","Fonticulua Campestris","Stratum Paleas","Fungoida Setisis","Osseus Spiralis","Bacterium Acies","Bacterium Informem","Tussock Cultro","Frutexa Acus","Concha Labiata","Tubus Compagibus","Bacterium Bullaris","Tussock Ignis","Tussock Propagito","Bacterium Tela","Frutexa Metallicum","Concha Renibus","Frutexa Flabellum","Sulphur Dioxide Fumarole","Fungoida Gelata","Cactoida Lapis","Silicate Magma Lava Spout","Sulphur Dioxide Gas Vent","Tussock Caputus","Fungoida Stabitis","Osseus Pumice","Silicate Vapour Gas Vent","Tussock Pennatis","Silicate Vapour Fumarole","Osseus Fractus","Fonticulua Digitos","Tussock Albata","Water Ice Geyser","Stratum Excutitus","Fonticulua Lapida","Aleoida Coronamus","Cactoida Cortexum","Tubus Cavas","Tussock Divisa","Water Ice Fumarole","Settlement","Aleoida Laminiae","Tussock Serrati","Clypeus Lacrimam","Tubus Rosarium","Concha Aureolas","Tussock Catena","Tubus Conifer","Aleoida Arcus","Iron Magma Lava Spout","Tussock Ventusa","Frutexa Flammasis","Fungoida Bullarum","Frutexa Fera","Roseum Brain Tree","Electricae Radialem","Tubus Sororibus","Cactoida Peperatis","Cactoida Vermis","Tussock Capillum","Tussock Virgam","Crater Outpost","Aleoida Spica","Clypeus Margaritus","Surface Station","Osseus Discus","Stratum Cucumisis","Stratum Laminamus","Fonticulua Upupam","Aleoida Gravis","Tussock Triticum","Cactoida Pullulanta","Osseus Cornibus","Tussock Pennata","Stratum Limaxus","Stratum Araneamus","Osseus Pellebantus","Carbon Dioxide Ice Geyser","Bacterium Volu","Recepta Umbrux","Nitrogen Ice Geyser","Carbon Dioxide Ice Fumarole","Clypeus Speculumi","Frutexa Sponsae","Electricae Pluma","Fumerola Nitris","Blatteum Bioluminescent Anemone","Nitrogen Ice Fumarole","Bark Mounds","Fumerola Aquatis","Bacterium Verrata","Bacterium Omentum","Methane Ice Geyser","Recepta Conditivus","Crystalline Shards","Fumerola Carbosis","Methane Ice Fumarole","Bacterium Scopulum","Tussock Stigmasis","Roseum Bioluminescent Anemone","Ammonia Ice Geyser","Stratum Frigus","Rubeum Bioluminescent Anemone","Recepta Deltahedronix","Ostrinum Brain Tree","Ammonia Ice Fumarole","Bacterium Nebulus","Fumerola Extremus","Prasinum Metallic Crystals","Prasinum Sinuous Tubers","Fonticulua Segmentatus","Prasinum Bioluminescent Anemone","Puniceum Brain Tree","Luteolum Anemone","Frutexa Collum","Purpureum Metallic Crystals","Crater Port","Installation","Proto-Lagrange Cloud","Water Gas Vent","Roseum Sinuous Tubers","Lividum Brain Tree","Candidum Peduncle Pod","Viride Bullet Mollusc","Caeruleum Sinuous Tubers","Concha Biconcavis","Rubeum Metallic Crystals","Solid Mineral Spheres","Water Fumarole","Water Geyser","Amphora Plant","Lindigoticum Ice Crystals","Fonticulua Fluctus","Cereum Bullet Mollusc","Gypseeum Brain Tree","Albulum Gourd Mollusc","Unknown","Caeruleum Peduncle Tree","Prasinum Ice Crystals","Flavum Metallic Crystals","Guardian Codex","Silicate Vapour Ice Fumarole","Roseum Ice Crystals","Ostrinum Peduncle Tree","Viride Peduncle Tree","Croceum Anemone","Common Thargoid Barnacle","Rubellum Peduncle Tree","Viride Brain Tree","Purpureum Ice Crystals","Aureum Brain Tree","Carbon Dioxide Gas Vent","Thargoid Barnacle Barbs","Lindigoticum Sinuous Tubers","Roseum Anemone","Rubeum Bullet Mollusc","Lindigoticum Silicate Crystals","Lividum Bullet Mollusc","Rubeum Ice Crystals","Blatteum Sinuous Tubers","Sulphur Dioxide Ice Fumarole","Thargoid Structure","Albidum Ice Crystals","Albidum Sinuous Tubers","Viride Lagrange Cloud","Flavum Ice Crystals","Tourist Beacon","Luteolum Reel Mollusc","Wrecked Ship","Albidum Chalice Pod","Roseum Lagrange Cloud","Viride Sinuous Tubers","Rubicundum Lagrange Cloud","Roseum Silicate Crystals","Prasinum Silicate Crystals","Caeruleum Lagrange Cloud","Roseus Sinuous Tubers","Viride Umbrella Mollusc","Flavum Bullet Mollusc","Purpureum Silicate Crystals","Rubeum Silicate Crystals","Flavum Silicate Crystals","Gypseeum Peduncle Pod","Violaceum Sinuous Tubers","Croceum Lagrange Cloud","Luteolum Lagrange Cloud","Purpureum Peduncle Pod","Abandoned Base","Crashed Ship","Rufum Peduncle Pod","Caeruleum Peduncle Pod","Candidum Rhizome Pod","Luteolum Umbrella Mollusc","Cobalteum Rhizome Pod","Thargoid Interceptor Shipwreck","Thargoid Uplink Device","Albidum Silicate Crystals","Luteolum Capsule Mollusc","Viride Gyre Tree","Coral Tree","Primary Thargoid Spire","Thargoid Barnacle Matrix","Toughened Spear Roots","Puniceum Anemone","Albidum Peduncle Tree","Luteolum Parasol Mollusc","Major Thargoid Spire","Thargoid Spire","Thargoid Banshees","Thargoid Scavengers","Guardian Beacon","Lindigoticum Brain Tree","Minor Thargoid Spire","Albens Bell Mollusc","T01-Type Anomaly","Albidum Quadripartite Pod","Thargoid Device","Rubeum Rhizome Pod","Coral Root","Green Class I Gas Giant","Lattice Mineral Spheres","Guardian Data Terminal","Bowl","Green Class III Gas Giant","Guardian Relic Tower","Roseum Gyre Pod","Rufum Gourd Mollusc","Bear","Green Class II Gas Giant","Hammerbot","Caeruleum Quadripartite Pod","Turtle","Squid","Caeruleum Torus Mollusc","Fistbump","Lacrosse","Lindigoticum Parasol Mollusc","Carbon Dioxide Fumarole","E03-Type Anomaly","Gypseeum Rhizome Pod","Purpureum Rhizome Pod","Viride Quadripartite Pod","Aurarium Gyre Pod","Thargoid Caustic Generator","Blatteum Bell Mollusc","Crossroads","K09-Type Anomaly","Rubicundum Collared Pod","Cereum Aster Pod","Green Gas Giant with Ammonia Life","K03-Type Anomaly","Luteolum Calcite Plates","Blatteum Quadripartite Pod","E04-Type Anomaly","K06-Type Anomaly","Q06-Type Anomaly","Rubellum Chalice Pod","Viride Capsule Mollusc","K04-Type Anomaly","Lindigoticum Calcite Plates","Lindigoticum Capsule Mollusc","P09-Type Anomaly","Prasinum Globe Mollusc","Purpureum Gourd Mollusc","Radicoida Unica","Thargoid Pod","Viride Lagrange Storm Cloud","Blatteum Collared Pod","Croceum Gourd Mollusc","E02-Type Anomaly","K01-Type Anomaly","K05-Type Anomaly","K10-Type Anomaly","Lindigoticum Bulb Mollusc","Lindigoticum Umbrella Mollusc","Luteolum Lagrange Storm Cloud","Robolobster","Thargoid Scout Shipwreck","Viride Bulb Mollusc","Viride Calcite Plates","Green Water Giant","Guardian Sentinel","K08-Type Anomaly","L07-Type Anomaly","L09-Type Anomaly","Lindigoticum Bell Mollusc","Luteolum Bulb Mollusc","Niveum Octahedral Pod","Ostrinum Chalice Pod","Roseum Globe Mollusc","Rutulum Calcite Plates","Stolon Pod","Albidum Collared Pod","Aurarium Gyre Tree","Caeruleum Chalice Pod","Caeruleum Gourd Mollusc","Caeruleum Octahedral Pod","Cobalteum Globe Mollusc","Croceum Globe Mollusc","Croceum Lagrange Storm Cloud","Flavum Torus Mollusc","Green Class IV Gas Giant","Guardian Pylon","Gypseeum Bell Mollusc","K12-Type Anomaly","K13-Type Anomaly","L01-Type Anomaly","L04-Type Anomaly","L06-Type Anomaly","L08-Type Anomaly","Lindigoticum Aster Pod","Lindigoticum Reel Mollusc","Lividum Collared Pod","Luteolum Bell Mollusc","Niveum Globe Mollusc","Ostrinum Globe Mollusc","P01-Type Anomaly","P02-Type Anomaly","P03-Type Anomaly","P04-Type Anomaly","P05-Type Anomaly","P07-Type Anomaly","P11-Type Anomaly","P12-Type Anomaly","P13-Type Anomaly","P14-Type Anomaly","P15-Type Anomaly","Phoeniceum Gourd Mollusc","Prasinum Aster Tree","Q01-Type Anomaly","Q02-Type Anomaly","Q04-Type Anomaly","Q09-Type Anomaly","Roseum Lagrange Storm Cloud","Rubellum Aster Pod","Rubicundum Lagrange Storm Cloud","Rutulum Globe Mollusc","T02-Type Anomaly","T03-Type Anomaly","T04-Type Anomaly","Thargoid Spires","Viride Chalice Pod","Viride Reel Mollusc"]
+      },
       "Body": {
         "type": "object",
         "properties": {
@@ -277,13 +311,12 @@
             "type": "string"
           },
           "subType": {
-            "description": "Subtype of the body.",
-            "type": "string",
-            "enum": ["A (Blue-White super giant) Star","A (Blue-White) Star","Ammonia world","B (Blue-White super giant) Star","B (Blue-White) Star","Black Hole","C Star","CJ Star","CN Star","Class I gas giant","Class II gas giant","Class III gas giant","Class IV gas giant","Class V gas giant","Earth-like world","F (White super giant) Star","F (White) Star","G (White-Yellow super giant) Star","G (White-Yellow) Star","Gas giant with ammonia-based life","Gas giant with water-based life","Helium gas giant","Helium-rich gas giant","Herbig Ae\/Be Star","High metal content world","Icy body","K (Yellow-Orange giant) Star","K (Yellow-Orange) Star","L (Brown dwarf) Star","M (Red dwarf) Star","M (Red giant) Star","M (Red super giant) Star","MS-type Star","Metal-rich body","Neutron Star","O (Blue-White) Star","Rocky Ice world","Rocky body","S-type Star","Supermassive Black Hole","T (Brown dwarf) Star","T Tauri Star","Water giant","Water world","White Dwarf (D) Star","White Dwarf (DA) Star","White Dwarf (DAB) Star","White Dwarf (DAV) Star","White Dwarf (DAZ) Star","White Dwarf (DB) Star","White Dwarf (DBV) Star","White Dwarf (DBZ) Star","White Dwarf (DC) Star","White Dwarf (DCV) Star","White Dwarf (DQ) Star","Wolf-Rayet C Star","Wolf-Rayet N Star","Wolf-Rayet NC Star","Wolf-Rayet O Star","Wolf-Rayet Star","Y (Brown dwarf) Star"]
+            "$ref": "#/components/schemas/BodySubtype"
           },
           "distanceToArrival": {
             "description": "Distance to the system arrival point of the body, measured in Kilometres.",
-            "type": "number"
+            "type": "number",
+            "minimum": 0
           },
           "mainStar": {
             "description": "Stars only.  Whether this is the main star of the system or not.",
@@ -391,9 +424,7 @@
             "$ref": "#/components/schemas/ValueMapping"
           },
           "terraformingState": {
-            "description": "Planets only.  terraforming state of the planet.",
-            "type": "string",
-            "enum": ["Not terraformable","Terraformable","Terraformed","Terraforming"]
+            "$ref": "#/components/schemas/BodyTerraformingState"
           },
           "materials": {
             "description": "Planets only.  Materials which can be found on the planet, mapping each material to it's percentage.",
@@ -488,7 +519,8 @@
           },
           "distanceToArrival": {
             "description": "Distance to the system arrival point of the station, measured in Kilometres.",
-            "type": "number"
+            "type": "number",
+            "minimum": 0
           },
           "primaryEconomy": {
             "description": "Primary economy for the station.",
@@ -1035,129 +1067,354 @@
     }
   },
   "SearchSystem": {
-      "type": "object",
-      "properties": {
-        "id64": {
-          "description": "ID64 of the system, a 64 bit unsigned integer.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "name": {
-          "description": "Name of the system.",
-          "type": "string"
-        },
-        "x": {
-          "description": "X coordinate of the system.",
-          "type": "number"
-        },
-        "y": {
-          "description": "Y coordinate of the system.",
-          "type": "number"
-        },
-        "z": {
-          "description": "Z coordinate of the system.",
-          "type": "number"
-        },
-        "population": {
-          "description": "Population of the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "nearest_populated_distance": {
-          "description": "Distance in LY to the nearest populated system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "nearest_populated_id64": {
-          "description": "ID64 of the nearest populated system, a 64 bit unsigned integer",
-          "type": "integer",
-          "minimum": 0
-        },
-        "updated_at": {
-          "description": "The timestamp that the system was last updated, in UTC.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "region": {
-          "type": "string",
-          "enum": ["Acheron","Achilles's Altar","Aquila's Halo","Arcadian Stream","Dryman's Point","Elysian Shore","Empyrean Straits","Errant Marches","Formorian Frontier","Galactic Centre","Hawking's Gap","Hieronymus Delta","Inner Orion Spur","Inner Orion-Perseus Conflux","Inner Scutum-Centaurus Arm","Izanami","Kepler's Crest","Lyra's Song","Mare Somnia","Newton's Vault","Norma Arm","Norma Expanse","Odin's Hold","Orion-Cygnus Arm","Outer Arm","Outer Orion Spur","Outer Orion-Perseus Conflux","Outer Scutum-Centaurus Arm","Perseus Arm","Ryker's Hope","Sagittarius-Carina Arm","Sanguineous Rim","Temple","Tenebrae","The Abyss","The Conduit","The Formidine Rift","The Veils","The Void","Trojan Belt","Vulcan Gate","Xibalba"]
-        },
-        "government": {
-          "description": "Government type of the faction of the system.",
-          "$ref": "#/components/schemas/Government"
-        },
-        "allegiance": {
-          "description": "Allegiance of the faction of the system.",
-          "$ref": "#/components/schemas/Allegiance"
-        },
-        "state": {
-          "description": "State of the controlling faction of the system.",
-          "$ref": "#/components/schemas/FactionState"
-        },
-        "primary_economy": {
-          "description": "Primary economy for the station.",
-          "$ref": "#/components/schemas/Economy"
-        },
-        "secondary_economy": {
-          "description": "Secondary economy for the station.",
-          "$ref": "#/components/schemas/Economy"
-        },
-        "controlling_faction": {
-          "description": "Controlling faction of the system.",
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "controlling_faction_state": {
-          "description": "State of the controlling faction of the system.",
-          "$ref": "#/components/schemas/FactionState"
-        },
-        "is_colonised": {
-          "description": "Is the system colonised?",
-          "type": "boolean"
-        },
-        "is_being_colonised": {
-          "description": "Is the system currently being colonised?",
-          "type": "boolean"
-        },
-        "controlling_power": {
-          "description": "Name of the controlling power of the system.",
+    "type": "object",
+    "properties": {
+      "id64": {
+        "description": "ID64 of the system, a 64 bit unsigned integer.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "name": {
+        "description": "Name of the system.",
+        "type": "string"
+      },
+      "x": {
+        "description": "X coordinate of the system.",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y coordinate of the system.",
+        "type": "number"
+      },
+      "z": {
+        "description": "Z coordinate of the system.",
+        "type": "number"
+      },
+      "population": {
+        "description": "Population of the system.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "nearest_populated_distance": {
+        "description": "Distance in LY to the nearest populated system.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "nearest_populated_id64": {
+        "description": "ID64 of the nearest populated system, a 64 bit unsigned integer",
+        "type": "integer",
+        "minimum": 0
+      },
+      "updated_at": {
+        "description": "The timestamp that the system was last updated, in UTC.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "region": {
+        "type": "string",
+        "description": "Region the system lies within.",
+        "$ref": "#/components/schemas/Region"
+      },
+      "government": {
+        "description": "Government type of the system.",
+        "$ref": "#/components/schemas/Government"
+      },
+      "allegiance": {
+        "description": "Allegiance of the system.",
+        "$ref": "#/components/schemas/Allegiance"
+      },
+      "state": {
+        "description": "State of the system.",
+        "$ref": "#/components/schemas/FactionState"
+      },
+      "primary_economy": {
+        "description": "Primary economy for the station.",
+        "$ref": "#/components/schemas/Economy"
+      },
+      "secondary_economy": {
+        "description": "Secondary economy for the station.",
+        "$ref": "#/components/schemas/Economy"
+      },
+      "controlling_faction": {
+        "description": "Controlling faction of the system.",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "controlling_faction_state": {
+        "description": "State of the controlling faction of the system.",
+        "$ref": "#/components/schemas/FactionState"
+      },
+      "is_colonised": {
+        "description": "Is the system colonised?",
+        "type": "boolean"
+      },
+      "is_being_colonised": {
+        "description": "Is the system currently being colonised?",
+        "type": "boolean"
+      },
+      "controlling_power": {
+        "description": "Name of the controlling power of the system.",
+        "$ref": "#/components/schemas/Power"
+      },
+      "powerplay_conflict_progress": {
+        "description": "Progress of any conflict between powers in the system.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the power involved in the conflict.",
+              "$ref": "#/components/schemas/Power"
+            },
+            "progress": {
+              "description": "Progress of the power in the conflict.",
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "name",
+            "progress"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "power_state_control_progress": {
+        "description": "Progress of the controlling power in controlling the system.",
+        "type": "number"
+      },
+      "power_state_reinforcement": {
+        "description": "Progress of the controlling power in reinforcing the system.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "power_state_undermining": {
+        "description": "Progress of the controlling power in losing the system.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "needs_permit": {
+        "description": "Does the system need a permit to enter?",
+        "type": "boolean"
+      },
+      "known_permit": {
+        "description": "Do we know where to get the permit for this system?",
+        "type": "boolean"
+      },
+      "minor_faction_presences": {
+        "description": "All minor factions with influence in the system.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "allegiance": {
+              "description": "Allegiance of the faction.",
+              "$ref": "#/components/schemas/Allegiance"
+            },
+            "government": {
+              "description": "Government type of the faction.",
+              "$ref": "#/components/schemas/Government"
+            },
+            "state": {
+              "description": "State of the faction.",
+              "$ref": "#/components/schemas/FactionState"
+            },
+            "influence": {
+              "description": "Influence of the faction.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "active_states": {
+              "description": "Currently active states for this faction.",
+              "$ref": "#/components/schemas/CurrentFactionState"
+            },
+            "pending_states": {
+              "description": "Pending states for this faction.",
+              "$ref": "#/components/schemas/CurrentFactionState"
+            },
+            "recovering_states": {
+              "description": "Recovering states for this faction.",
+              "$ref": "#/components/schemas/CurrentFactionState"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": "false"
+        }
+      },
+      "powers": {
+        "description": "Powers with influence in the system.",
+        "type": "array",
+        "items": {
+          "description": "Name of the powers.",
           "$ref": "#/components/schemas/Power"
-        },
-        "powerplay_conflict_progress": {
-          "description": "Progress of any conflict between powers in the system.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "description": "Name of the power involved in the conflict.",
-                "$ref": "#/components/schemas/Power"
-              },
-              "progress": {
-                "description": "Progress of the power in the conflict.",
-                "type": "number",
-                "minimum": 0
+        }
+      },
+      "power_state": {
+        "description": "State of the controlling power for this system.",
+        "$ref": "#/components/schemas/FactionState"
+      },
+      "synthesis_recipes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "$ref": "#/components/schemas/SynthesisRecipe"
+            },
+            "level": {
+              "$ref": "#/components/schemas/SynthesisGrade"
+            }
+          }
+        }
+      },
+      "body_count": {
+        "description": "Count of the number of bodies (planets and stars) that exist in the system.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "bodies": {
+        "description": "All bodies which have been scanned in the system.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "The ID of the body, a 64 bit unsigned integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "id64": {
+              "description": "The ID64 of the body, a 64 bit unsigned integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "bodyId": {
+              "description": "The numeric ID of the body within the system, a 64 bit unsigned integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "name": {
+              "description": "The name of the body.",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of the body.",
+              "type": "string",
+              "enum": ["Planet","Star"]
+            },
+            "subtype": {
+              "$ref": "#/components/schemas/BodySubtype"
+            },
+            "terraforming_state": {
+              "$ref": "#/components/schemas/BodyTerraformingState"
+            },
+            "is_main_star": {
+              "description": "Stars only.  Whether this is the main star of the system or not.",
+              "type": "boolean"
+            },
+            "distance_to_arrival": {
+              "description": "Distance to the system arrival point of the body, measured in Kilometres.",
+              "type": "number",
+              "minimum": 0
+            },
+            "estimated_scan_value": {
+              "description": "Estimated reward from scanning the body.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "estimated_mapping_value": {
+              "description": "Estimated reward from mapping the body.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "landmarks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "$ref": "#/components/schemas/LandmarkType"
+                  },
+                  "subtype": {
+                    "$ref": "#/components/schemas/LandmarkSubtype"
+                  },
+                  "count": {
+                    "description": "Count of the number of instances of this landmark on the body.",
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "value": {
+                    "description": "Estimated reward from scanning the landmark.",
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "type",
+                  "count",
+                  "value"
+                ],
+                "additionalProperties": false
               }
             },
+            "landmark_value": {
+              "description": "Total value of all the landmarks on the body.",
+              "type": "integer",
+              "minimum": 0
+            },
             "required": [
+              "id",
+              "id64",
               "name",
-              "progress"
+              "type",
+              "is_main_star",
+              "distance_to_arrival",
+              "estimated_scan_value",
+              "estimated_mapping_value"
             ],
             "additionalProperties": false
           }
         }
       },
-      "required": [
-        "id64",
-        "name",
-        "x",
-        "y",
-        "z",
-        "population"
-
-      ],
-      "additionalProperties": false
+      "stations": {
+        "description": "All stations which are known in the system.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "market_id": {
+              "description": "The ID of the station , a 64 bit unsigned integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "name": {
+              "description": "The name of the station.",
+              "type": "string"
+            },
+            "required": [
+              "market_id",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "required": [
+      "id64",
+      "name",
+      "x",
+      "y",
+      "z",
+      "population",
+      "needs_permit",
+      "known_permit"
+    ],
+    "additionalProperties": false
   }
 }
