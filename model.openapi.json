@@ -1033,5 +1033,131 @@
       ],
       "additionalProperties": false
     }
+  },
+  "SearchSystem": {
+      "type": "object",
+      "properties": {
+        "id64": {
+          "description": "ID64 of the system, a 64 bit unsigned integer.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "name": {
+          "description": "Name of the system.",
+          "type": "string"
+        },
+        "x": {
+          "description": "X coordinate of the system.",
+          "type": "number"
+        },
+        "y": {
+          "description": "Y coordinate of the system.",
+          "type": "number"
+        },
+        "z": {
+          "description": "Z coordinate of the system.",
+          "type": "number"
+        },
+        "population": {
+          "description": "Population of the system.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "nearest_populated_distance": {
+          "description": "Distance in LY to the nearest populated system.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "nearest_populated_id64": {
+          "description": "ID64 of the nearest populated system, a 64 bit unsigned integer",
+          "type": "integer",
+          "minimum": 0
+        },
+        "updated_at": {
+          "description": "The timestamp that the system was last updated, in UTC.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "region": {
+          "type": "string",
+          "enum": ["Acheron","Achilles's Altar","Aquila's Halo","Arcadian Stream","Dryman's Point","Elysian Shore","Empyrean Straits","Errant Marches","Formorian Frontier","Galactic Centre","Hawking's Gap","Hieronymus Delta","Inner Orion Spur","Inner Orion-Perseus Conflux","Inner Scutum-Centaurus Arm","Izanami","Kepler's Crest","Lyra's Song","Mare Somnia","Newton's Vault","Norma Arm","Norma Expanse","Odin's Hold","Orion-Cygnus Arm","Outer Arm","Outer Orion Spur","Outer Orion-Perseus Conflux","Outer Scutum-Centaurus Arm","Perseus Arm","Ryker's Hope","Sagittarius-Carina Arm","Sanguineous Rim","Temple","Tenebrae","The Abyss","The Conduit","The Formidine Rift","The Veils","The Void","Trojan Belt","Vulcan Gate","Xibalba"]
+        },
+        "government": {
+          "description": "Government type of the faction of the system.",
+          "$ref": "#/components/schemas/Government"
+        },
+        "allegiance": {
+          "description": "Allegiance of the faction of the system.",
+          "$ref": "#/components/schemas/Allegiance"
+        },
+        "state": {
+          "description": "State of the controlling faction of the system.",
+          "$ref": "#/components/schemas/FactionState"
+        },
+        "primary_economy": {
+          "description": "Primary economy for the station.",
+          "$ref": "#/components/schemas/Economy"
+        },
+        "secondary_economy": {
+          "description": "Secondary economy for the station.",
+          "$ref": "#/components/schemas/Economy"
+        },
+        "controlling_faction": {
+          "description": "Controlling faction of the system.",
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "controlling_faction_state": {
+          "description": "State of the controlling faction of the system.",
+          "$ref": "#/components/schemas/FactionState"
+        },
+        "is_colonised": {
+          "description": "Is the system colonised?",
+          "type": "boolean"
+        },
+        "is_being_colonised": {
+          "description": "Is the system currently being colonised?",
+          "type": "boolean"
+        },
+        "controlling_power": {
+          "description": "Name of the controlling power of the system.",
+          "$ref": "#/components/schemas/Power"
+        },
+        "powerplay_conflict_progress": {
+          "description": "Progress of any conflict between powers in the system.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Name of the power involved in the conflict.",
+                "$ref": "#/components/schemas/Power"
+              },
+              "progress": {
+                "description": "Progress of the power in the conflict.",
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "name",
+              "progress"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id64",
+        "name",
+        "x",
+        "y",
+        "z",
+        "population"
+
+      ],
+      "additionalProperties": false
   }
 }
