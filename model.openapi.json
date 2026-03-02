@@ -1485,7 +1485,7 @@
                 "description": "Total value of all the landmarks on the body.",
                 "type": "integer",
                 "minimum": 0
-              },
+              }
             },
             "required": [
               "id",
