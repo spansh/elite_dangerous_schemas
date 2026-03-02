@@ -480,6 +480,7 @@
                 }
               }
             },
+            "required": [],
             "additionalProperties": false
           },
           "reserveLevel": {
