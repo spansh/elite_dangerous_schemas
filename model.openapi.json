@@ -1088,484 +1088,484 @@
           "updateTime"
         ],
         "additionalProperties": false
-      }
-    },
-    "BriefSearchStation": {
-      "type": "object",
-      "properties": {
-        "market_id": {
-          "description": "The ID of the station , a 64 bit unsigned integer.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "body_id64": {
-          "description": "Planetary stations only.  The ID64 of the body the station is on, a 64 bit unsigned integer.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "body_name": {
-          "description": "Planetary stations only.  The name of the body the station is on.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The name of the station.",
-          "type": "string"
-        },
-        "distance_to_arrival": {
-          "description": "Distance to the system arrival point of the station, measured in Kilometres.",
-          "type": "number",
-          "minimum": 0
-        },
-        "has_large_pad": {
-          "description": "Does the station have a large landing pad?",
-          "type": "boolean"
-        },
-        "has_market": {
-          "description": "Does the station have a market?",
-          "type": "boolean"
-        },
-        "has_shipyard": {
-          "description": "Does the station have a shipyard?",
-          "type": "boolean"
-        },
-        "has_outfitting": {
-          "description": "Does the station have a outfitting?",
-          "type": "boolean"
-        },
-        "is_dssa_carrier": {
-          "description": "Is this a DSSA approved player carrier?",
-          "type": "boolean"
-        },
-        "large_pads": {
-          "description": "Numer of large landing pads of the station.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "medium_pads": {
-          "description": "Numer of medium landing pads of the station.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "small_pads": {
-          "description": "Numer of small landing pads of the station.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "services": {
-          "description": "Servies provided by the station.",
-          "type": "array",
-          "items": {
-            "$ref": "#/components/schemas/Service"
-          }
-        },
-        "controlling_minor_faction": {
-          "description": "Controlling faction of the station.",
-          "type": "string"
-        },
-        "controlling_minor_faction_state": {
-          "description": "State of the controlling faction of the station.",
-          "type": "string"
-        }
       },
-      "required": [
-        "market_id",
-        "name",
-        "has_large_pad",
-        "has_market",
-        "has_shipyard",
-        "has_outfitting",
-        "is_dssa_carrier"
-      ],
-      "additionalProperties": false
-    },
-    "SearchSystem": {
-      "type": "object",
-      "properties": {
-        "id64": {
-          "description": "ID64 of the system, a 64 bit unsigned integer.",
-          "type": "integer",
-          "minimum": 0
+      "BriefSearchStation": {
+        "type": "object",
+        "properties": {
+          "market_id": {
+            "description": "The ID of the station , a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "body_id64": {
+            "description": "Planetary stations only.  The ID64 of the body the station is on, a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "body_name": {
+            "description": "Planetary stations only.  The name of the body the station is on.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the station.",
+            "type": "string"
+          },
+          "distance_to_arrival": {
+            "description": "Distance to the system arrival point of the station, measured in Kilometres.",
+            "type": "number",
+            "minimum": 0
+          },
+          "has_large_pad": {
+            "description": "Does the station have a large landing pad?",
+            "type": "boolean"
+          },
+          "has_market": {
+            "description": "Does the station have a market?",
+            "type": "boolean"
+          },
+          "has_shipyard": {
+            "description": "Does the station have a shipyard?",
+            "type": "boolean"
+          },
+          "has_outfitting": {
+            "description": "Does the station have a outfitting?",
+            "type": "boolean"
+          },
+          "is_dssa_carrier": {
+            "description": "Is this a DSSA approved player carrier?",
+            "type": "boolean"
+          },
+          "large_pads": {
+            "description": "Numer of large landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "medium_pads": {
+            "description": "Numer of medium landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "small_pads": {
+            "description": "Numer of small landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "services": {
+            "description": "Servies provided by the station.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            }
+          },
+          "controlling_minor_faction": {
+            "description": "Controlling faction of the station.",
+            "type": "string"
+          },
+          "controlling_minor_faction_state": {
+            "description": "State of the controlling faction of the station.",
+            "type": "string"
+          }
         },
-        "name": {
-          "description": "Name of the system.",
-          "type": "string"
-        },
-        "x": {
-          "description": "X coordinate of the system.",
-          "type": "number"
-        },
-        "y": {
-          "description": "Y coordinate of the system.",
-          "type": "number"
-        },
-        "z": {
-          "description": "Z coordinate of the system.",
-          "type": "number"
-        },
-        "population": {
-          "description": "Population of the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "nearest_populated_distance": {
-          "description": "Distance in LY to the nearest populated system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "nearest_populated_id64": {
-          "description": "ID64 of the nearest populated system, a 64 bit unsigned integer",
-          "type": "integer",
-          "minimum": 0
-        },
-        "updated_at": {
-          "description": "The timestamp that the system was last updated, in UTC.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "region": {
-          "type": "string",
-          "description": "Region the system lies within.",
-          "$ref": "#/components/schemas/Region"
-        },
-        "government": {
-          "description": "Government type of the system.",
-          "$ref": "#/components/schemas/Government"
-        },
-        "allegiance": {
-          "description": "Allegiance of the system.",
-          "$ref": "#/components/schemas/Allegiance"
-        },
-        "state": {
-          "description": "State of the system.",
-          "$ref": "#/components/schemas/FactionState"
-        },
-        "security": {
-          "description": "Security rating of the system.",
-          "$ref": "#/components/schemas/Security"
-        },
-        "primary_economy": {
-          "description": "Primary economy for the station.",
-          "$ref": "#/components/schemas/Economy"
-        },
-        "secondary_economy": {
-          "description": "Secondary economy for the station.",
-          "$ref": "#/components/schemas/Economy"
-        },
-        "controlling_faction": {
-          "description": "Controlling faction of the system.",
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "controlling_faction_state": {
-          "description": "State of the controlling faction of the system.",
-          "$ref": "#/components/schemas/FactionState"
-        },
-        "is_colonised": {
-          "description": "Is the system colonised?",
-          "type": "boolean"
-        },
-        "is_being_colonised": {
-          "description": "Is the system currently being colonised?",
-          "type": "boolean"
-        },
-        "controlling_power": {
-          "description": "Name of the controlling power of the system.",
-          "$ref": "#/components/schemas/Power"
-        },
-        "power": {
-          "description": "Powers with influence in the system.",
-          "type": "array",
-          "items": {
-            "description": "Name of the powers.",
+        "required": [
+          "market_id",
+          "name",
+          "has_large_pad",
+          "has_market",
+          "has_shipyard",
+          "has_outfitting",
+          "is_dssa_carrier"
+        ],
+        "additionalProperties": false
+      },
+      "SearchSystem": {
+        "type": "object",
+        "properties": {
+          "id64": {
+            "description": "ID64 of the system, a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "name": {
+            "description": "Name of the system.",
+            "type": "string"
+          },
+          "x": {
+            "description": "X coordinate of the system.",
+            "type": "number"
+          },
+          "y": {
+            "description": "Y coordinate of the system.",
+            "type": "number"
+          },
+          "z": {
+            "description": "Z coordinate of the system.",
+            "type": "number"
+          },
+          "population": {
+            "description": "Population of the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "nearest_populated_distance": {
+            "description": "Distance in LY to the nearest populated system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "nearest_populated_id64": {
+            "description": "ID64 of the nearest populated system, a 64 bit unsigned integer",
+            "type": "integer",
+            "minimum": 0
+          },
+          "updated_at": {
+            "description": "The timestamp that the system was last updated, in UTC.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "region": {
+            "type": "string",
+            "description": "Region the system lies within.",
+            "$ref": "#/components/schemas/Region"
+          },
+          "government": {
+            "description": "Government type of the system.",
+            "$ref": "#/components/schemas/Government"
+          },
+          "allegiance": {
+            "description": "Allegiance of the system.",
+            "$ref": "#/components/schemas/Allegiance"
+          },
+          "state": {
+            "description": "State of the system.",
+            "$ref": "#/components/schemas/FactionState"
+          },
+          "security": {
+            "description": "Security rating of the system.",
+            "$ref": "#/components/schemas/Security"
+          },
+          "primary_economy": {
+            "description": "Primary economy for the station.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "secondary_economy": {
+            "description": "Secondary economy for the station.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "controlling_faction": {
+            "description": "Controlling faction of the system.",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "controlling_faction_state": {
+            "description": "State of the controlling faction of the system.",
+            "$ref": "#/components/schemas/FactionState"
+          },
+          "is_colonised": {
+            "description": "Is the system colonised?",
+            "type": "boolean"
+          },
+          "is_being_colonised": {
+            "description": "Is the system currently being colonised?",
+            "type": "boolean"
+          },
+          "controlling_power": {
+            "description": "Name of the controlling power of the system.",
             "$ref": "#/components/schemas/Power"
-          }
-        },
-        "power_state_control_progress": {
-          "description": "Progress of the controlling power in controlling the system.",
-          "type": "number"
-        },
-        "power_state_reinforcement": {
-          "description": "Progress of the controlling power in reinforcing the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "power_state_undermining": {
-          "description": "Progress of the controlling power in losing the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "needs_permit": {
-          "description": "Does the system need a permit to enter?",
-          "type": "boolean"
-        },
-        "known_permit": {
-          "description": "Do we know where to get the permit for this system?",
-          "type": "boolean"
-        },
-        "minor_faction_presences": {
-          "description": "All minor factions with influence in the system.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "allegiance": {
-                "description": "Allegiance of the faction.",
-                "$ref": "#/components/schemas/Allegiance"
-              },
-              "government": {
-                "description": "Government type of the faction.",
-                "$ref": "#/components/schemas/Government"
-              },
-              "state": {
-                "description": "State of the faction.",
-                "$ref": "#/components/schemas/FactionState"
-              },
-              "influence": {
-                "description": "Influence of the faction.",
-                "type": "number",
-                "minimum": 0,
-                "maximum": 1
-              },
-              "active_states": {
-                "description": "Currently active states for this faction.",
-                "$ref": "#/components/schemas/CurrentFactionState"
-              },
-              "pending_states": {
-                "description": "Pending states for this faction.",
-                "$ref": "#/components/schemas/CurrentFactionState"
-              },
-              "recovering_states": {
-                "description": "Recovering states for this faction.",
-                "$ref": "#/components/schemas/CurrentFactionState"
-              }
-            },
-            "required": [
-              "name"
-            ],
-            "additionalProperties": "false"
-          }
-        },
-        "power_conflict_progress": {
-          "description": "Progress of any conflict between powers in the system.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "description": "Name of the power involved in the conflict.",
-                "$ref": "#/components/schemas/Power"
-              },
-              "progress": {
-                "description": "Progress of the power in the conflict.",
-                "type": "number",
-                "minimum": 0
-              }
-            },
-            "required": [
-              "name",
-              "progress"
-            ],
-            "additionalProperties": false
-          }
-        },
-        "power_state": {
-          "description": "State of the controlling power for this system.",
-          "$ref": "#/components/schemas/FactionState"
-        },
-        "synthesis_recipes": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "$ref": "#/components/schemas/SynthesisRecipe"
-              },
-              "level": {
-                "$ref": "#/components/schemas/SynthesisGrade"
-              }
-            },
-            "required": [
-              "name",
-              "level"
-            ],
-            "additionalProperties": false
-          }
-        },
-        "body_count": {
-          "description": "Count of the number of bodies (planets and stars) that exist in the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "bodies": {
-          "description": "All bodies which have been scanned in the system.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "The ID of the body, a 64 bit unsigned integer.",
-                "type": "integer",
-                "minimum": 0
-              },
-              "id64": {
-                "description": "The ID64 of the body, a 64 bit unsigned integer.",
-                "type": "integer",
-                "minimum": 0
-              },
-              "name": {
-                "description": "The name of the body.",
-                "type": "string"
-              },
-              "type": {
-                "description": "The type of the body.",
-                "type": "string",
-                "enum": ["Planet","Star"]
-              },
-              "subtype": {
-                "$ref": "#/components/schemas/BodySubtype"
-              },
-              "terraforming_state": {
-                "$ref": "#/components/schemas/BodyTerraformingState"
-              },
-              "is_main_star": {
-                "description": "Stars only.  Whether this is the main star of the system or not.",
-                "type": [
-                  "boolean",
-                  "null"
-                ]
-              },
-              "distance_to_arrival": {
-                "description": "Distance to the system arrival point of the body, measured in Kilometres.",
-                "type": "number",
-                "minimum": 0
-              },
-              "estimated_scan_value": {
-                "description": "Estimated reward from scanning the body.",
-                "type": "integer",
-                "minimum": 0
-              },
-              "estimated_mapping_value": {
-                "description": "Estimated reward from mapping the body.",
-                "type": "integer",
-                "minimum": 0
-              },
-              "landmarks": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "$ref": "#/components/schemas/LandmarkType"
-                    },
-                    "subtype": {
-                      "$ref": "#/components/schemas/LandmarkSubtype"
-                    },
-                    "count": {
-                      "description": "Count of the number of instances of this landmark on the body.",
-                      "type": "integer",
-                      "minimum": 0
-                    },
-                    "value": {
-                      "description": "Estimated reward from scanning the landmark.",
-                      "type": "integer",
-                      "minimum": 0
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "count",
-                    "value"
-                  ],
-                  "additionalProperties": false
+          },
+          "power": {
+            "description": "Powers with influence in the system.",
+            "type": "array",
+            "items": {
+              "description": "Name of the powers.",
+              "$ref": "#/components/schemas/Power"
+            }
+          },
+          "power_state_control_progress": {
+            "description": "Progress of the controlling power in controlling the system.",
+            "type": "number"
+          },
+          "power_state_reinforcement": {
+            "description": "Progress of the controlling power in reinforcing the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "power_state_undermining": {
+            "description": "Progress of the controlling power in losing the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "needs_permit": {
+            "description": "Does the system need a permit to enter?",
+            "type": "boolean"
+          },
+          "known_permit": {
+            "description": "Do we know where to get the permit for this system?",
+            "type": "boolean"
+          },
+          "minor_faction_presences": {
+            "description": "All minor factions with influence in the system.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "allegiance": {
+                  "description": "Allegiance of the faction.",
+                  "$ref": "#/components/schemas/Allegiance"
+                },
+                "government": {
+                  "description": "Government type of the faction.",
+                  "$ref": "#/components/schemas/Government"
+                },
+                "state": {
+                  "description": "State of the faction.",
+                  "$ref": "#/components/schemas/FactionState"
+                },
+                "influence": {
+                  "description": "Influence of the faction.",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "active_states": {
+                  "description": "Currently active states for this faction.",
+                  "$ref": "#/components/schemas/CurrentFactionState"
+                },
+                "pending_states": {
+                  "description": "Pending states for this faction.",
+                  "$ref": "#/components/schemas/CurrentFactionState"
+                },
+                "recovering_states": {
+                  "description": "Recovering states for this faction.",
+                  "$ref": "#/components/schemas/CurrentFactionState"
                 }
               },
-              "landmark_value": {
-                "description": "Total value of all the landmarks on the body.",
-                "type": "integer",
-                "minimum": 0
-              }
-            },
-            "required": [
-              "id",
-              "id64",
-              "name",
-              "type",
-              "is_main_star",
-              "distance_to_arrival",
-              "estimated_scan_value",
-              "estimated_mapping_value"
-            ],
-            "additionalProperties": false
+              "required": [
+                "name"
+              ],
+              "additionalProperties": "false"
+            }
+          },
+          "power_conflict_progress": {
+            "description": "Progress of any conflict between powers in the system.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Name of the power involved in the conflict.",
+                  "$ref": "#/components/schemas/Power"
+                },
+                "progress": {
+                  "description": "Progress of the power in the conflict.",
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "name",
+                "progress"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "power_state": {
+            "description": "State of the controlling power for this system.",
+            "$ref": "#/components/schemas/FactionState"
+          },
+          "synthesis_recipes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/SynthesisRecipe"
+                },
+                "level": {
+                  "$ref": "#/components/schemas/SynthesisGrade"
+                }
+              },
+              "required": [
+                "name",
+                "level"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "body_count": {
+            "description": "Count of the number of bodies (planets and stars) that exist in the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "bodies": {
+            "description": "All bodies which have been scanned in the system.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "description": "The ID of the body, a 64 bit unsigned integer.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "id64": {
+                  "description": "The ID64 of the body, a 64 bit unsigned integer.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "name": {
+                  "description": "The name of the body.",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type of the body.",
+                  "type": "string",
+                  "enum": ["Planet","Star"]
+                },
+                "subtype": {
+                  "$ref": "#/components/schemas/BodySubtype"
+                },
+                "terraforming_state": {
+                  "$ref": "#/components/schemas/BodyTerraformingState"
+                },
+                "is_main_star": {
+                  "description": "Stars only.  Whether this is the main star of the system or not.",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "distance_to_arrival": {
+                  "description": "Distance to the system arrival point of the body, measured in Kilometres.",
+                  "type": "number",
+                  "minimum": 0
+                },
+                "estimated_scan_value": {
+                  "description": "Estimated reward from scanning the body.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "estimated_mapping_value": {
+                  "description": "Estimated reward from mapping the body.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "landmarks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "$ref": "#/components/schemas/LandmarkType"
+                      },
+                      "subtype": {
+                        "$ref": "#/components/schemas/LandmarkSubtype"
+                      },
+                      "count": {
+                        "description": "Count of the number of instances of this landmark on the body.",
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "value": {
+                        "description": "Estimated reward from scanning the landmark.",
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "count",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "landmark_value": {
+                  "description": "Total value of all the landmarks on the body.",
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "id64",
+                "name",
+                "type",
+                "is_main_star",
+                "distance_to_arrival",
+                "estimated_scan_value",
+                "estimated_mapping_value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "stations": {
+            "description": "All stations which are known in the system.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BriefSearchStation"
+            }
+          },
+          "thargoid_war_state": {
+            "description": "Current Thargoid state in this system.",
+            "$ref": "#/components/schemas/ThargoidState"
+          },
+          "thargoid_war_failure_state": {
+            "description": "Thargoid state in this system if the war is lost by the players.",
+            "$ref": "#/components/schemas/ThargoidState"
+          },
+          "thargoid_war_success_state": {
+            "description": "Thargoid state in this system if the war is won by the players.",
+            "$ref": "#/components/schemas/ThargoidState"
+          },
+          "thargoid_war_success_reached": {
+            "description": "Have the players won the Thargoid war in this system.",
+            "type": "boolean"
+          },
+          "thargoid_war_progress": {
+            "description": "Progress of the Thargoid war in this system.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "thargoid_war_days_remaining": {
+            "description": "Days remaining of the Thargoid war in this system.",
+            "type": "number",
+            "minimum": 0
+          },
+          "thargoid_war_ports_remaining": {
+            "description": "Posts remaining in the Thargoid war in this system.",
+            "type": "number",
+            "minimum": 0
+          },
+          "estimated_scan_value": {
+            "description": "Estimated reward from scanning all the bodies in the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "estimated_mapping_value": {
+            "description": "Estimated reward from mapping all the bodies in the system.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "landmark_value": {
+            "description": "Total value of all the landmarks in the system.",
+            "type": "integer",
+            "minimum": 0
           }
         },
-        "stations": {
-          "description": "All stations which are known in the system.",
-          "type": "array",
-          "items": {
-            "$ref": "#/components/schemas/BriefSearchStation"
-          }
-        },
-        "thargoid_war_state": {
-          "description": "Current Thargoid state in this system.",
-          "$ref": "#/components/schemas/ThargoidState"
-        },
-        "thargoid_war_failure_state": {
-          "description": "Thargoid state in this system if the war is lost by the players.",
-          "$ref": "#/components/schemas/ThargoidState"
-        },
-        "thargoid_war_success_state": {
-          "description": "Thargoid state in this system if the war is won by the players.",
-          "$ref": "#/components/schemas/ThargoidState"
-        },
-        "thargoid_war_success_reached": {
-          "description": "Have the players won the Thargoid war in this system.",
-          "type": "boolean"
-        },
-        "thargoid_war_progress": {
-          "description": "Progress of the Thargoid war in this system.",
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "thargoid_war_days_remaining": {
-          "description": "Days remaining of the Thargoid war in this system.",
-          "type": "number",
-          "minimum": 0
-        },
-        "thargoid_war_ports_remaining": {
-          "description": "Posts remaining in the Thargoid war in this system.",
-          "type": "number",
-          "minimum": 0
-        },
-        "estimated_scan_value": {
-          "description": "Estimated reward from scanning all the bodies in the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "estimated_mapping_value": {
-          "description": "Estimated reward from mapping all the bodies in the system.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "landmark_value": {
-          "description": "Total value of all the landmarks in the system.",
-          "type": "integer",
-          "minimum": 0
-        }
-      },
-      "required": [
-        "id64",
-        "name",
-        "x",
-        "y",
-        "z",
-        "population",
-        "needs_permit",
-        "known_permit"
-      ],
-      "additionalProperties": false
+        "required": [
+          "id64",
+          "name",
+          "x",
+          "y",
+          "z",
+          "population",
+          "needs_permit",
+          "known_permit"
+        ],
+        "additionalProperties": false
+      }
     }
   }
 }
