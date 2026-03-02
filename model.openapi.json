@@ -1343,7 +1343,7 @@
               "required": [
                 "name"
               ],
-              "additionalProperties": "false"
+              "additionalProperties": false
             }
           },
           "power_conflict_progress": {
