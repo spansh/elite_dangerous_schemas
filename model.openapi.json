@@ -172,7 +172,6 @@
             "format": "date-time"
           }
         },
-        "required": [],
         "additionalProperties": false
       },
       "ValueMapping": {
@@ -182,7 +181,6 @@
             "type": "number"
           }
         },
-        "required": [],
         "additionalProperties": false
       },
       "BeltOrRing": {
@@ -480,7 +478,6 @@
                 }
               }
             },
-            "required": [],
             "additionalProperties": false
           },
           "reserveLevel": {
@@ -1312,6 +1309,10 @@
             "items": {
               "type": "object",
               "properties": {
+                "name": {
+                  "description": "Name of the faction.",
+                  "type": "string"
+                },
                 "allegiance": {
                   "description": "Allegiance of the faction.",
                   "$ref": "#/components/schemas/Allegiance"
