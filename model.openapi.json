@@ -172,6 +172,7 @@
             "format": "date-time"
           }
         },
+        "required": [],
         "additionalProperties": false
       },
       "ValueMapping": {
@@ -181,6 +182,7 @@
             "type": "number"
           }
         },
+        "required": [],
         "additionalProperties": false
       },
       "BeltOrRing": {
