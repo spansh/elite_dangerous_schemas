@@ -7,12 +7,39 @@
   },
   "components": {
     "schemas": {
+      "Service": {
+        "type": "string",
+        "enum": ["Flight Controller","Station Operations","Dock","Autodock","Station Menu","Contacts","Refuel","Market","Repair","Workshop","Missions","Search and Rescue","Missions Generated","Restock","Social Space","Black Market","Interstellar Factors Contact","Powerplay","System Colonisation","Crew Lounge","Universal Cartographics","Outfitting","Livery","Construction Services","Shop","Bartender","Vista Genomics","Shipyard","Pioneer Supplies","Apex Interstellar","Tuning","Fleet Carrier Fuel","Fleet Carrier Management","Frontline Solutions","Refinery Contact","Redemption Office","Technology Broker","Material Trader","Squadron Bank","Fleet Carrier Administration","On Dock Mission","Fleet Carrier Vendor"]
+      },
+      "Materials": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the material",
+              "type": "enum",
+              "enum": ["Iron","Nickel","Carbon","Phosphorus","Sulphur","Chromium","Manganese","Cadmium","Zinc","Germanium","Vanadium","Niobium","Molybdenum","Selenium","Tin","Tungsten","Mercury","Tellurium","Ruthenium","Yttrium","Zirconium","Arsenic","Antimony","Technetium","Polonium"]
+            },
+            "share": {
+              "description": "Percentage of the material that can be found.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        }
+      },
+      "Security": {
+        "type": "string",
+        "enum": ["Anarchy","High","Low","Medium"]
+      },
       "ThargoidState": {
         "type": [
           "null",
           "string"
         ],
-        "enum": [null,"Thargoid Controlled","Thargoid Harvest","Thargoid Probing","Thargoid Recovery","Thargoid Stronghold"]
+        "enum": [null,"None","Thargoid Controlled","Thargoid Harvest","Thargoid Probing","Thargoid Recovery","Thargoid Stronghold"]
       },
 
       "Power": {
@@ -546,8 +573,7 @@
             "description": "Servies provided by the station.",
             "type": "array",
             "items": {
-              "type": "string",
-              "enum": ["Flight Controller","Station Operations","Dock","Autodock","Station Menu","Contacts","Refuel","Market","Repair","Workshop","Missions","Search and Rescue","Missions Generated","Restock","Social Space","Black Market","Interstellar Factors Contact","Powerplay","System Colonisation","Crew Lounge","Universal Cartographics","Outfitting","Livery","Construction Services","Shop","Bartender","Vista Genomics","Shipyard","Pioneer Supplies","Apex Interstellar","Tuning","Fleet Carrier Fuel","Fleet Carrier Management","Frontline Solutions","Refinery Contact","Redemption Office","Technology Broker","Material Trader","Squadron Bank","Fleet Carrier Administration","On Dock Mission","Fleet Carrier Vendor"]
+              "$ref": "#/components/schemas/Service"
             }
           },
           "type": {
@@ -851,8 +877,7 @@
           },
           "security": {
             "description": "Security rating of the system.",
-            "type": "string",
-            "enum": ["Anarchy","High","Low","Medium"]
+            "$ref": "#/components/schemas/Security"
           },
           "population": {
             "description": "Population of the system.",
@@ -1066,6 +1091,94 @@
       "additionalProperties": false
     }
   },
+  "BriefSearchStation": {
+    "type": "object",
+    "properties": {
+      "market_id": {
+        "description": "The ID of the station , a 64 bit unsigned integer.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "body_id64": {
+        "description": "Planetary stations only.  The ID64 of the body the station is on, a 64 bit unsigned integer.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "body_name": {
+        "description": "Planetary stations only.  The name of the body the station is on.",
+        "type": "string"
+      },
+      "name": {
+        "description": "The name of the station.",
+        "type": "string"
+      },
+      "distance_to_arrival": {
+        "description": "Distance to the system arrival point of the station, measured in Kilometres.",
+        "type": "number",
+        "minimum": 0
+      },
+      "has_large_pad": {
+        "description": "Does the station have a large landing pad?",
+        "type": "boolean"
+      },
+      "has_market": {
+        "description": "Does the station have a market?",
+        "type": "boolean"
+      },
+      "has_shipyard": {
+        "description": "Does the station have a shipyard?",
+        "type": "boolean"
+      },
+      "has_outfitting": {
+        "description": "Does the station have a outfitting?",
+        "type": "boolean"
+      },
+      "is_dssa_carrier": {
+        "description": "Is this a DSSA approved player carrier?",
+        "type": "boolean"
+      },
+      "large_pads": {
+        "description": "Numer of large landing pads of the station.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "medium_pads": {
+        "description": "Numer of medium landing pads of the station.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "small_pads": {
+        "description": "Numer of small landing pads of the station.",
+        "type": "integer",
+        "minimum": 0
+      },
+      "services": {
+        "description": "Servies provided by the station.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Service"
+        }
+      },
+      "controlling_minor_faction": {
+        "description": "Controlling faction of the station.",
+        "type": "string"
+      },
+      "controlling_minor_faction_state": {
+        "description": "State of the controlling faction of the station.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "market_id",
+      "name",
+      "has_large_pad",
+      "has_market",
+      "has_shipyard",
+      "has_outfitting",
+      "is_dssa_carrier"
+    ],
+    "additionalProperties": false
+  },
   "SearchSystem": {
     "type": "object",
     "properties": {
@@ -1127,6 +1240,10 @@
         "description": "State of the system.",
         "$ref": "#/components/schemas/FactionState"
       },
+      "security": {
+        "description": "Security rating of the system.",
+        "$ref": "#/components/schemas/Security"
+      },
       "primary_economy": {
         "description": "Primary economy for the station.",
         "$ref": "#/components/schemas/Economy"
@@ -1158,27 +1275,12 @@
         "description": "Name of the controlling power of the system.",
         "$ref": "#/components/schemas/Power"
       },
-      "powerplay_conflict_progress": {
-        "description": "Progress of any conflict between powers in the system.",
+      "power": {
+        "description": "Powers with influence in the system.",
         "type": "array",
         "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "description": "Name of the power involved in the conflict.",
-              "$ref": "#/components/schemas/Power"
-            },
-            "progress": {
-              "description": "Progress of the power in the conflict.",
-              "type": "number",
-              "minimum": 0
-            }
-          },
-          "required": [
-            "name",
-            "progress"
-          ],
-          "additionalProperties": false
+          "description": "Name of the powers.",
+          "$ref": "#/components/schemas/Power"
         }
       },
       "power_state_control_progress": {
@@ -1246,12 +1348,27 @@
           "additionalProperties": "false"
         }
       },
-      "powers": {
-        "description": "Powers with influence in the system.",
+      "power_conflict_progress": {
+        "description": "Progress of any conflict between powers in the system.",
         "type": "array",
         "items": {
-          "description": "Name of the powers.",
-          "$ref": "#/components/schemas/Power"
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the power involved in the conflict.",
+              "$ref": "#/components/schemas/Power"
+            },
+            "progress": {
+              "description": "Progress of the power in the conflict.",
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "name",
+            "progress"
+          ],
+          "additionalProperties": false
         }
       },
       "power_state": {
@@ -1269,7 +1386,12 @@
             "level": {
               "$ref": "#/components/schemas/SynthesisGrade"
             }
-          }
+          },
+          "required": [
+            "name",
+            "level"
+          ],
+          "additionalProperties": false
         }
       },
       "body_count": {
@@ -1293,11 +1415,6 @@
               "type": "integer",
               "minimum": 0
             },
-            "bodyId": {
-              "description": "The numeric ID of the body within the system, a 64 bit unsigned integer.",
-              "type": "integer",
-              "minimum": 0
-            },
             "name": {
               "description": "The name of the body.",
               "type": "string"
@@ -1315,7 +1432,10 @@
             },
             "is_main_star": {
               "description": "Stars only.  Whether this is the main star of the system or not.",
-              "type": "boolean"
+              "type": [
+                "boolean",
+                "null"
+              ]
             },
             "distance_to_arrival": {
               "description": "Distance to the system arrival point of the body, measured in Kilometres.",
@@ -1367,18 +1487,72 @@
               "type": "integer",
               "minimum": 0
             },
-            "required": [
-              "id",
-              "id64",
-              "name",
-              "type",
-              "is_main_star",
-              "distance_to_arrival",
-              "estimated_scan_value",
-              "estimated_mapping_value"
-            ],
-            "additionalProperties": false
-          }
+            "stations": {
+              "description": "All stations which are known in the system.",
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BriefSearchStation"
+              }
+            },
+            "thargoid_war_state": {
+              "description": "Current Thargoid state in this system.",
+              "$ref": "#/components/schemas/ThargoidState"
+            },
+            "thargoid_war_failure_state": {
+              "description": "Thargoid state in this system if the war is lost by the players.",
+              "$ref": "#/components/schemas/ThargoidState"
+            },
+            "thargoid_war_success_state": {
+              "description": "Thargoid state in this system if the war is won by the players.",
+              "$ref": "#/components/schemas/ThargoidState"
+            },
+            "thargoid_war_success_reached": {
+              "description": "Have the players won the Thargoid war in this system.",
+              "type": "boolean"
+            },
+            "thargoid_war_progress": {
+              "description": "Progress of the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "thargoid_war_days_remaining": {
+              "description": "Days remaining of the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0
+            },
+            "thargoid_war_ports_remaining": {
+              "description": "Posts remaining in the Thargoid war in this system.",
+              "type": "number",
+              "minimum": 0
+            },
+            "estimated_scan_value": {
+              "description": "Estimated reward from scanning all the bodies in the system.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "estimated_mapping_value": {
+              "description": "Estimated reward from mapping all the bodies in the system.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "landmark_value": {
+              "description": "Total value of all the landmarks in the system.",
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "id",
+            "id64",
+            "name",
+            "type",
+            "is_main_star",
+            "distance_to_arrival",
+            "estimated_scan_value",
+            "estimated_mapping_value"
+          ],
+          "additionalProperties": false
         }
       },
       "stations": {
@@ -1395,13 +1569,13 @@
             "name": {
               "description": "The name of the station.",
               "type": "string"
-            },
-            "required": [
-              "market_id",
-              "name"
-            ],
-            "additionalProperties": false
-          }
+            }
+          },
+          "required": [
+            "market_id",
+            "name"
+          ],
+          "additionalProperties": false
         }
       }
     },

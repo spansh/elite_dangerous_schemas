@@ -89,7 +89,7 @@
                   "description": "Dump of the system in the same format as the dump files available at https://spansh.co.uk/dumps",
                   "properties": {
                     "system": {
-                      "$ref": "./model.openapi.json#/components/schemas/DumpSystem"
+                      "$ref": "./model.openapi.json#/components/schemas/SearchSystem"
                     }
                   }
                 }
