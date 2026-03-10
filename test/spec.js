@@ -18,11 +18,15 @@ const requests = [
     {
         method: 'get',
         path: '/api/system/10477373803'
+    },
+    {
+        method: 'get',
+        path: '/api/body/10477373803'
     }
 ];
 
 for (const request of requests) {
-    it(`${request.method.toUpperCase()} ${request.path}`, async () => {
+    it(`${request.method.toUpperCase()} ${request.path} passes OpenAPI check`, async () => {
         const response = await axios[request.method](`https://spansh.co.uk${request.path}`);
         expect(response).to.have.status(200).and.to.matchApiSchema();
     })
