@@ -86,12 +86,76 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "description": "Dump of the system in the same format as the dump files available at https://spansh.co.uk/dumps",
+                  "description": "Dump of the system in the same format as the search available at https://spansh.co.uk/api/systems/search",
                   "properties": {
-                    "system": {
+                    "record": {
                       "$ref": "./model.openapi.json#/components/schemas/SearchSystem"
                     }
-                  }
+                  },
+                  "required": [
+                    "record"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Details about the error",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error"
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/body/{id64}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id64",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required": true,
+            "description": "ID64 of the body, a 64 bit unsigned integer."
+          }
+        ],
+        "summary": "Fetch all relevant data for a particular body in the galaxy",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Dump of the body in the same format as the search available at https://spansh.co.uk/api/bodies/search",
+                  "properties": {
+                    "record": {
+                      "$ref": "./model.openapi.json#/components/schemas/SearchBody"
+                    }
+                  },
+                  "required": [
+                    "record"
+                  ],
+                  "additionalProperties": false
                 }
               }
             }
