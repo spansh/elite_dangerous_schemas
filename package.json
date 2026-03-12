@@ -6,6 +6,7 @@
   "scripts": {
     "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --recursive"
   },
+  "packageManager": "pnpm",
   "keywords": [],
   "author": "",
   "license": "ISC",
