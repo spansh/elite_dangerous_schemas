@@ -2119,6 +2119,17 @@
           "estimated_mapping_value"
         ],
         "additionalProperties": false
+      },
+      "MultiDumpSystem": {
+        "description": "Dump of the multiple systems with one entry per system.  Pretty printed to show one system per line.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "system": {
+              "$ref": "#/components/schemas/DumpSystem"
+            }
+          }
+        }
       }
     }
   }

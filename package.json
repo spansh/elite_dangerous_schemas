@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --recursive"
+    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --recursive",
+    "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/downloads.js",
+    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/api.js"
   },
   "packageManager": "pnpm",
   "keywords": [],
