@@ -1239,7 +1239,7 @@
         ],
         "additionalProperties": false
       },
-      "BriefSystem": {
+      "BriefDumpSystem": {
         "type": "object",
         "properties": {
           "id64": {
@@ -2141,49 +2141,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DumpSystem"
-        }
-      },
-      "BriefDumpSystem": {
-        "description": "Brief synopsis of core system data.",
-        "type": "object",
-        "properties": {
-          "id64": {
-            "description": "ID64 of the system, a 64 bit unsigned integer.",
-            "type": "integer",
-            "minimum": 0
-          },
-          "name": {
-            "description": "Name of the system.",
-            "type": "string"
-          },
-          "mainStar": {
-            "description": "Class of the main star of the system.",
-            "$ref": "#/components/schemas/BodyStarSubType"
-          },
-          "coords": {
-            "description": "Coordinates of the system.",
-            "type": "object",
-            "properties": {
-              "x": {
-                "description": "X coordinate of the system.",
-                "type": "number"
-              },
-              "y": {
-                "description": "Y coordinate of the system.",
-                "type": "number"
-              },
-              "z": {
-                "description": "Z coordinate of the system.",
-                "type": "number"
-              }
-            },
-            "required": [
-              "x",
-              "y",
-              "z"
-            ],
-            "additionalProperties": false
-          }
         }
       },
       "MultiBriefDumpSystem": {
