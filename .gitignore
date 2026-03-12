@@ -17,3 +17,4 @@ testem.log
 
 # scripts
 /start_container.sh
+/*.bundle.openapi.json

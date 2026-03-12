@@ -6,7 +6,8 @@
   "scripts": {
     "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --recursive",
     "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/downloads.js",
-    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/api.js"
+    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/api.js",
+    "bundle_galaxy": "pnpm --package=@apidevtools/swagger-cli dlx swagger-cli bundle galaxy_downloads.openapi.json -o galaxy_downloads.bundle.openapi.json"
   },
   "packageManager": "pnpm",
   "keywords": [],
