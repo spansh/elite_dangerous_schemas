@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --recursive",
-    "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/downloads.js",
-    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha test/api.js",
+    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 --recursive",
+    "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/downloads.js",
+    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/api.js",
     "bundle_downloads_schema": "pnpm --package=@apidevtools/swagger-cli dlx swagger-cli bundle galaxy_downloads.openapi.json -o galaxy_downloads.bundle.openapi.json",
     "create_json_schema": "cat <(jq 'del(.definitions, .type, .items)' galaxy.schema.json) <(jq '.paths[\"/{filename}\"].get.responses[\"200\"].content[\"application/json\"].schema' galaxy_downloads.bundle.openapi.json) |jq -s add >galaxy.new.schema.json",
     "downgrade_json_schema": "pnpm --package=@openapi-contrib/openapi-schema-to-json-schema dlx openapi-schema-to-json-schema --input galaxy.new.schema.json --output galaxy.old.schema.json",
