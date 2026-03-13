@@ -179,6 +179,62 @@
           }
         }
       }
+    },
+    "/station/{marketId}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "marketId",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "required": true,
+            "description": "Market ID64 of the station , a 64 bit unsigned integer."
+          }
+        ],
+        "summary": "Fetch all relevant data for a particular station in the galaxy",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Dump of the station in the same format as the search available at https://spansh.co.uk/api/stations/search",
+                  "properties": {
+                    "record": {
+                      "$ref": "./model.openapi.json#/components/schemas/SearchStation"
+                    }
+                  },
+                  "required": [
+                    "record"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Details about the error",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -7,6 +7,57 @@
   },
   "components": {
     "schemas": {
+      "CommodityCategory": {
+        "description": "Category of the commodity.",
+        "type": "string",
+        "enum": ["Chemicals","Consumer Items","Foods","Industrial Materials","Legal Drugs","Machinery","Medicines","Metals","Minerals","Salvage","Slavery","Technology","Textiles","Waste","Weapons"]
+      },
+      "ModuleWeaponMode": {
+        "description": "Weapons only.  Mode of the weapon.",
+        "type": "string",
+        "enum": ["Fixed","Gimbal","Turret"]
+      },
+      "ModuleName": {
+        "description": "Nameof the module.",
+        "type": "string",
+        "enum": ["Power Distributor","Fuel Scoop","Sensors","Life Support","Shield Cell Bank","Auto Field-Maintenance Unit","Power Plant","Shield Generator","Thrusters","Frame Shift Drive","Frame Shift Drive (SCO)","Lightweight Alloy","Reinforced Alloy","Refinery","Military Grade Composite","Prospector Limpet Controller","Frame Shift Drive Interdictor","Hatch Breaker Limpet Controller","Fuel Transfer Limpet Controller","Collector Limpet Controller","Repair Limpet Controller","Reactive Surface Composite","Mirrored Surface Composite","Cargo Rack","Beam Laser","Hull Reinforcement Package","Planetary Vehicle Hangar","Module Reinforcement Package","Multi-Cannon","Pulse Laser","Fuel Tank","Burst Laser","Bi-Weave Shield Generator","Cannon","Fragment Cannon","Shield Booster","Sub-Surface Displacement Missile","Mining Laser","Seeker Missile Rack","Recon Limpet Controller","Cargo Scanner","Kill Warrant Scanner","Missile Rack","Economy Class Passenger Cabin","Frame Shift Wake Scanner","Torpedo Pylon","Pulse Wave Analyser","Rail Gun","Prismatic Shield Generator","Fighter Hangar","Plasma Accelerator","Business Class Passenger Cabin","Mine Launcher","Abrasion Blaster","Xeno Multi Limpet Controller","Seismic Charge Launcher","Mk II Cargo Rack","Decontamination Limpet Controller","Mining Multi Limpet Controller","Operations Multi Limpet Controller","Rescue Multi Limpet Controller","First Class Passenger Cabin","Detailed Surface Scanner","Chaff Launcher","Heat Sink Launcher","Standard Docking Computer","Supercruise Assist","Electronic Countermeasure","Research Limpet Controller","Advanced Planetary Approach Suite","Advanced Docking Computer","AX Multi-Cannon","Shock Mine Launcher","AX Missile Rack","Planetary Approach Suite","Meta Alloy Hull Reinforcement","Mk II Mining Multi-Limpet Controller","Luxury Class Passenger Cabin","Point Defence","Enhanced AX Multi-Cannon","Mining Volley Repeater","Remote Release Flak Launcher","Universal Multi Limpet Controller","Mk II Supercharge Optimised Frame Shift Drive (SCO)","Mk II Gravity Optimised Thrusters","Mk II Plasma Shock Accelerator","Xeno Scanner","Shutdown Field Neutraliser","Imperial Hammer Rail Gun","Pack-Hound Missile Rack","Enforcer Cannon","Advanced Plasma Accelerator","Retributor Beam Laser","Pulse Disruptor Laser","Concord Cannon","Rocket Propelled FSD Disruptor","Pacifier Frag-Cannon","Mining Lance","Cytoscrambler Burst Laser","Thargoid Pulse Neutraliser","Enhanced Xeno Scanner","Mk II Agile Boost Thrusters","Advanced Multi-Cannon","Mk II Ablative Lightweight Alloys","Mk II Ablative Reinforced Alloys","Mk II Ablative Military Grade Composite","Mk II Ablative Reactive Surface Composite","Mk II Ablative Mirrored Surface Composite","Shock Cannon","Advanced Missile Rack","Enhanced AX Missile Rack","Corrosion Resistant Cargo Rack","Guardian Shield Reinforcement","Experimental Weapon Stabiliser","Guardian Hull Reinforcement","Guardian Module Reinforcement","Remote Release Flechette Launcher","Guardian Hybrid Power Distributor","Guardian Hybrid Power Plant","Guardian Shard Cannon","Guardian Nanite Torpedo Pylon","Guardian Plasma Charger","Guardian FSD Booster","Caustic Sink Launcher","Pulse Wave Xeno Scanner","Sub-Surface Extraction Missile","Enzyme Missile Rack","Guardian Gauss Cannon","Enhanced Performance Thrusters"]
+      },
+      "ModuleClass": {
+        "description": "Class of the module.",
+        "type": "integer",
+        "enum": [1,3,2,5,4,7,6,8,0]
+      },
+      "ModuleRating": {
+        "description": "Rating of the module.",
+        "type": "string",
+        "enum": ["E","D","C","I","B","A","F","G","H"]
+      },
+      "ModuleCategory": {
+        "description": "Category of the module.",
+        "type": "string",
+        "enum": ["hardpoint","internal","utility","standard"]
+      },
+      "Ship": {
+        "description": "Ship restrictions for the module.",
+        "type": "string",
+        "enum": ["Adder","Alliance Challenger","Alliance Chieftain","Alliance Crusader","Anaconda","Asp Explorer","Asp Scout","Beluga Liner","Caspian Explorer","Cobra MkIII","Cobra MkIV","Cobra MkV","Corsair","Diamondback Explorer","Diamondback Scout","Dolphin","Eagle","Federal Assault Ship","Federal Corvette","Federal Dropship","Federal Gunship","Fer-de-Lance","Hauler","Imperial Clipper","Imperial Courier","Imperial Cutter","Imperial Eagle","Keelback","Kestrel Mk II","Krait MkII","Krait Phantom","Mamba","Mandalay","Orca","Panther Clipper MkII","Python","Python MkII","Sidewinder","Type-10 Defender","Type-11 Prospector","Type-6 Transporter","Type-7 Transporter","Type-8 Transporter","Type-9 Heavy","Viper MkIII","Viper MkIV","Vulture"]
+      },
+      "Commodity": {
+        "description": "Name of the commidity..",
+        "type": "string",
+        "enum": ["AI Relics","Advanced Catalysers","Advanced Medicines","Aepyornis Egg","Aganippe Rush","Agri-Medicines","Agronomic Treatment","Alacarakmo Skin Art","Albino Quechua Mammoth Meat","Alexandrite","Algae","Altairian Skin","Aluminium","Alya Body Soap","Ancient Artefact","Ancient Key","Anduliga Fire Works","Animal Meat","Animal Monitors","Anomaly Particles","Antimatter Containment Unit","Antique Jewellery","Antiquities","Any Na Coffee","Apa Vietii","Aquaponic Systems","Arouca Conventual Sweets","Articulation Motors","Assault Plans","Atmospheric Processors","Auto-Fabricators","Az Cancri Formula 42","Azure Milk","Baked Greebles","Baltah'sine Vacuum Krill","Banki Amphibious Leather","Basic Medicines","Bast Snake Gin","Battle Weapons","Bauxite","Beer","Belalans Ray Leather","Benitoite","Bertrandite","Beryllium","Bioreducing Lichen","Biowaste","Bismuth","Black Box","Bone Fragments","Bootleg Liquor","Borasetani Pathogenetics","Bromellite","Buckyball Beer Mats","Building Fabricators","Burnham Bile Distillate","CD-75 Kitten Brand Coffee","CMM Composite","Caustic Tissue Sample","Centauri Mega Gin","Ceramic Composites","Ceremonial Heike Tea","Ceti Rabbits","Chameleon Cloth","Chateau De Aegaeon","Chemical Waste","Cherbones Blood Crystals","Chi Eridani Marine Paste","Classified Experimental Equipment","Clothing","Cobalt","Coffee","Coltan","Combat Stabilisers","Commercial Samples","Computer Components","Conductive Fabrics","Consumer Technology","Copper","Coquim Spongiform Victuals","Coral Sap","Crom Silver Fesh","Crop Harvesters","Cryolite","Crystalline Spheres","Cyst Specimen","Damaged Escape Pod","Damna Carapaces","Data Core","Delta Phoenicis Palms","Deuringas Truffles","Diplomatic Bag","Diso Ma Corn","Domestic Appliances","Duradrives","Earth Relics","Eden Apples of Aerial","Eleu Thermals","Emergency Power Cells","Encrypted Correspondence","Encrypted Data Storage","Energy Grid Assembly","Eranin Pearl Whisky","Eshu Umbrellas","Esuseku Caviar","Ethgreze Tea Buds","Evacuation Shelter","Exhaust Manifold","Experimental Chemicals","Explosives","Fish","Food Cartridges","Fossil Remnants","Fruit and Vegetables","Fujin Tea","Galactic Travel Guide","Gallite","Gallium","Geawen Dance Dust","Gene Bank","Geological Equipment","Geological Samples","Gerasian Gueuze Beer","Giant Irukama Snails","Giant Verrix","Gilya Signature Weapons","Gold","Goman Yaupon Coffee","Goslarite","Grain","Grandidierite","Guardian Casket","Guardian Orb","Guardian Relic","Guardian Tablet","Guardian Totem","Guardian Urn","H.E. Suits","HIP 10175 Bush Meat","HIP 118311 Swarm","HIP Organophosphates","HIP Proto-Squid","HN Shock Mount","HR 7221 Wheat","Haematite","Hafnium 178","Haiden Black Brew","Hardware Diagnostic Sensor","Harma Silver Sea Rum","Havasupai Dream Catcher","Heatsink Interlink","Helvetitj Pearls","Holva Duelling Blades","Honesty Pills","Hostages","Hydrogen Fuel","Hydrogen Peroxide","Imperial Slaves","Impure Spire Mineral","Indi Bourbon","Indite","Indium","Insulating Membrane","Ion Distributor","Jadeite","Jaques Quinentian Still","Jaradharre Puzzle Box","Jaroua Rice","Jotun Mookah","Kachirigin Filter Leeches","Kamitra Cigars","Kamorin Historic Weapons","Karetii Couture","Karsuki Locusts","Kinago Violins","Kongga Ale","Koro Kung Pellets","LTT Hyper Sweet","Land Enrichment Systems","Landmines","Lanthanum","Large Survey Data Cache","Lavian Brandy","Leather","Leathery Eggs","Leestian Evil Juice","Lepidolite","Liquid oxygen","Liquor","Lithium","Lithium Hydroxide","Live Hecate Sea Worms","Low Temperature Diamonds","Lucan Onionhead","Lyrae Weed","Magnetic Emitter Coil","Marine Equipment","Master Chefs","Mechucos High Tea","Medb Starlube","Medical Diagnostic Equipment","Meta-Alloys","Methane Clathrate","Methanol Monohydrate Crystals","Micro Controllers","Micro-weave Cooling Hoses","Microbial Furnaces","Military Grade Fabrics","Military Intelligence","Military Plans","Mineral Extractors","Mineral Oil","Modular Terminals","Moissanite","Mokojing Beast Feast","Mollusc Brain Tissue","Mollusc Fluid","Mollusc Membrane","Mollusc Mycelium","Mollusc Soft Tissue","Mollusc Spores","Momus Bog Spaniel","Monazite","Motrona Experience Jelly","Mukusubii Chitin-os","Mulachi Giant Fungus","Muon Imager","Musgravite","Mysterious Idol","Nanobreakers","Nanomedicines","Narcotics","Natural Fabrics","Neofabric Insulation","Neritus Berries","Nerve Agents","Ngadandari Fire Opals","Nguna Modern Antiques","Njangari Saddles","Non Euclidian Exotanks","Non-Lethal Weapons","Occupied Escape Pod","Ochoeng Chillies","Onionhead","Onionhead Alpha Strain","Onionhead Beta Strain","Onionhead Gamma Strain","Ophiuch Exino Artefacts","Organ Sample","Orrerian Vicious Brew","Osmium","Painite","Palladium","Pantaa Prayer Sticks","Pavonis Ear Grubs","Performance Enhancers","Personal Effects","Personal Gifts","Personal Weapons","Pesticides","Platinum","Platinum Alloy","Pod Core Tissue","Pod Dead Tissue","Pod Mesoglea","Pod Outer Tissue","Pod Shell Tissue","Pod Surface Tissue","Pod Tissue","Political Prisoners","Polymers","Power Converter","Power Generators","Power Transfer Bus","Praseodymium","Precious Gems","Progenitor Cells","Prohibited Research Materials","Protective Membrane Scrap","Prototype Tech","Pyrophyllite","Radiation Baffle","Rajukru Multi-Stoves","Rapa Bao Snake Skins","Rare Artwork","Reactive Armour","Rebel Transmissions","Reinforced Mounting Plate","Resonating Separators","Rhodplumsite","Robotics","Rockforth Fertiliser","Rusani Old Smokey","Rutile","SAP 8 Core Container","Samarium","Sanuma Decorative Meat","Saxon Wine","Scientific Research","Scientific Samples","Scrap","Semi-Refined Spire Mineral","Semiconductors","Serendibite","Shan's Charis Orchid","Silver","Skimmer Components","Slaves","Small Survey Data Cache","Soontill Relics","Sothis Crystalline Gold","Space Pioneer Relics","Steel","Structural Regulators","Superconductors","Surface Stabilisers","Survival Equipment","Synthetic Fabrics","Synthetic Meat","Synthetic Reagents","Taaffeite","Tactical Data","Tanmark Tranquil Tea","Tantalum","Tarach Spice","Tauri Chimes","Tea","Technical Blueprints","Telemetry Suite","Terra Mater Blood Bores","Thallium","Thargoid Basilisk Tissue Sample","Thargoid Biological Matter","Thargoid Cyclops Tissue Sample","Thargoid Glaive Tissue Sample","Thargoid Heart","Thargoid Hydra Tissue Sample","Thargoid Link","Thargoid Medusa Tissue Sample","Thargoid Orthrus Tissue Sample","Thargoid Probe","Thargoid Resin","Thargoid Scout Tissue Sample","Thargoid Scythe Tissue Sample","Thargoid Sensor","Thargoid Technology Samples","The Hutton Mug","The Waters of Shintara","Thermal Cooling Units","Thorium","Thrutis Cream","Tiegfries Synth Silk","Time Capsule","Tiolce Waste2Paste Units","Titan Deep Tissue Sample","Titan Drive Component","Titan Maw Deep Tissue Sample","Titan Maw Partial Tissue Sample","Titan Maw Tissue Sample","Titan Partial Tissue Sample","Titan Tissue Sample","Titanium","Tobacco","Toxandji Virocide","Toxic Waste","Trade Data","Trinkets of Hidden Fortune","Tritium","Ultra-Compact Processor Prototypes","Unclassified Relic","Unoccupied Escape Pod","Unstable Data Core","Uraninite","Uranium","Uszaian Tree Grub","Utgaroar Millennial Eggs","Uzumoku Low-G Wings","V Herculis Body Rub","Vanayequi Ceratomorpha Fur","Vega Slimweed","Vidavantian Lace","Void Extract Coffee","Void Opal","Volkhab Bee Drones","Water","Water Purifiers","Wheemete Wheat Cakes","Wine","Witchhaul Kobe Beef","Wolf Fesh","Wreckage Components","Wulpa Hyperbore Systems","Wuthielo Ku Froth","Xenobiological Prison Pod","Xihe Biomorphic Companions","Yaso Kondi Leaf","Zeessze Ant Grub Glue"]
+      },
+      "Influence": {
+        "description": "Influence of the faction.",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "StationState": {
+        "description": "State of the station.",
+        "type": "string",
+        "enum": ["Construction","Damaged","UnderAttack","UnderRepairs"]
+      },
       "Service": {
         "type": "string",
         "enum": ["Flight Controller","Station Operations","Dock","Autodock","Station Menu","Contacts","Refuel","Market","Repair","Workshop","Missions","Search and Rescue","Missions Generated","Restock","Social Space","Black Market","Interstellar Factors Contact","Powerplay","System Colonisation","Crew Lounge","Universal Cartographics","Outfitting","Livery","Construction Services","Shop","Bartender","Vista Genomics","Shipyard","Pioneer Supplies","Apex Interstellar","Tuning","Fleet Carrier Fuel","Fleet Carrier Management","Frontline Solutions","Refinery Contact","Redemption Office","Technology Broker","Material Trader","Squadron Bank","Fleet Carrier Administration","On Dock Mission","Fleet Carrier Vendor"]
@@ -212,10 +263,7 @@
             "$ref": "#/components/schemas/Government"
           },
           "influence": {
-            "description": "Influence of the faction.",
-            "type": "number",
-            "minimum": 0,
-            "maximum": 1
+            "$ref": "#/components/schemas/Influence"
           },
           "activeStates": {
             "description": "Currently active states for this faction.",
@@ -796,9 +844,7 @@
             "$ref": "#/components/schemas/StationType"
           },
           "state": {
-            "description": "State of the station.",
-            "type": "string",
-            "enum": ["Construction","Damaged","UnderAttack","UnderRepairs"]
+            "$ref": "#/components/schemas/StationState"
           },
           "latitude": {
             "description": "Planetary stations only.  Latitude of the station.",
@@ -850,18 +896,15 @@
                   "type": "object",
                   "properties": {
                     "name": {
-                      "description": "Name of the commodity.",
-                      "type": "string"
+                      "$ref": "#/components/schemas/Commodity"
                     },
                     "symbol": {
                       "description": "Frontier symbol identifier of the commodity.",
                       "type": "string"
                     },
                     "category": {
-                      "description": "Category of the commodity.",
-                      "type": "string",
-                      "enum": ["Chemicals","Consumer Items","Foods","Industrial Materials","Legal Drugs","Machinery","Medicines","Metals","Minerals","Salvage","Slavery","Technology","Textiles","Waste","Weapons"]
-                      },
+                      "$ref": "#/components/schemas/CommodityCategory"
+                    },
                     "commodityId": {
                       "description": "Frontier numeric identifier of the commodity.",
                       "type": "integer"
@@ -931,8 +974,7 @@
                   "type": "object",
                   "properties": {
                     "name": {
-                      "description": "Name of the ship.",
-                      "type": "string"
+                      "$ref": "#/components/schemas/Ship"
                     },
                     "symbol": {
                       "description": "Frontier symbol identifier of the ship.",
@@ -974,8 +1016,7 @@
                   "type": "object",
                   "properties": {
                     "name": {
-                      "description": "Name of the module.",
-                      "type": "string"
+                      "$ref": "#/components/schemas/ModuleName"
                     },
                     "symbol": {
                       "description": "Frontier symbol identifier of the module.",
@@ -986,25 +1027,24 @@
                       "type": "number"
                     },
                     "class": {
-                      "description": "Class of the module.",
-                      "type": "integer",
-                      "enum": [1,3,2,5,4,7,6,8,0]
+                      "$ref": "#/components/schemas/ModuleClass"
                     },
                     "rating": {
-                      "description": "Rating of the module.",
-                      "type": "string",
-                      "enum": ["E","D","C","I","B","A","F","G","H"]
+                      "$ref": "#/components/schemas/ModuleRating"
                     },
                     "category": {
-                      "description": "Category of the module.",
-                      "type": "string",
-                      "enum": ["hardpoint","internal","utility","standard"]
+                      "$ref": "#/components/schemas/ModuleCategory"
                     },
                     "ship": {
                       "description": "Ship restrictions for the module.",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": ["Adder","Alliance Challenger","Alliance Chieftain","Alliance Crusader","Anaconda","Asp Explorer","Asp Scout","Beluga Liner","Caspian Explorer","Cobra MkIII","Cobra MkIV","Cobra MkV","Corsair","Diamondback Explorer","Diamondback Scout","Dolphin","Eagle","Federal Assault Ship","Federal Corvette","Federal Dropship","Federal Gunship","Fer-de-Lance","Hauler","Imperial Clipper","Imperial Courier","Imperial Cutter","Imperial Eagle","Keelback","Kestrel Mk II","Krait MkII","Krait Phantom","Mamba","Mandalay","Orca","Panther Clipper MkII","Python","Python MkII","Sidewinder","Type-10 Defender","Type-11 Prospector","Type-6 Transporter","Type-7 Transporter","Type-8 Transporter","Type-9 Heavy","Viper MkIII","Viper MkIV","Vulture"]
+                      "oneOf": [
+                        {
+                          "$ref": "#/components/schemas/Ship"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
                     }
                   },
                   "required": [
@@ -1302,7 +1342,7 @@
         "type": "object",
         "properties": {
           "market_id": {
-            "description": "The ID of the station , a 64 bit unsigned integer.",
+            "description": "The ID of the station, a 64 bit unsigned integer.",
             "type": "integer",
             "minimum": 0
           },
@@ -1533,10 +1573,7 @@
                   "$ref": "#/components/schemas/FactionState"
                 },
                 "influence": {
-                  "description": "Influence of the faction.",
-                  "type": "number",
-                  "minimum": 0,
-                  "maximum": 1
+                  "$ref": "#/components/schemas/Influence"
                 },
                 "active_states": {
                   "description": "Currently active states for this faction.",
@@ -2149,6 +2186,457 @@
         "items": {
           "$ref": "#/components/schemas/BriefDumpSystem"
         }
+      },
+      "SearchStation": {
+        "type": "object",
+        "properties": {
+          "market_id": {
+            "description": "The ID of the station, a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "system_name": {
+            "description": "Name of the system.",
+            "type": "string"
+          },
+          "system_id64": {
+            "description": "ID64 of the system, a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "system_x": {
+            "description": "X coordinate of the system.",
+            "type": "number"
+          },
+          "system_y": {
+            "description": "Y coordinate of the system.",
+            "type": "number"
+          },
+          "system_z": {
+            "description": "Z coordinate of the system.",
+            "type": "number"
+          },
+          "system_is_colonised": {
+            "description": "Is the system colonised?",
+            "type": "boolean"
+          },
+          "system_is_being_colonised": {
+            "description": "Is the system currently being colonised?",
+            "type": "boolean"
+          },
+          "system_power": {
+            "description": "Powers present in the system.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Power"
+            }
+          },
+          "system_controlling_power": {
+            "description": "Name of the controlling power of the system.",
+            "$ref": "#/components/schemas/Power"
+          },
+          "system_power_state": {
+            "description": "State of the controlling power for this system.",
+            "$ref": "#/components/schemas/PowerState"
+          },
+          "system_primary_economy": {
+            "description": "Primary economy for the system the station is in.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "system_secondary_economy": {
+            "description": "Secondary economy for the system the station is in.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "system_population": {
+            "description": "Population of the system the station is in.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "updated_at": {
+            "description": "The timestamp that the station was last updated, in UTC.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "body_id64": {
+            "description": "Planetary stations only.  The ID64 of the body the station is on, a 64 bit unsigned integer.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "body_name": {
+            "description": "Planetary stations only.  The name of the body the station is on.",
+            "type": "string"
+          },
+          "is_planetary": {
+            "description": "Whether the station is a planetary station or not.",
+            "type": "boolean"
+          },
+          "body_type": {
+            "$ref": "#/components/schemas/BodyType"
+          },
+          "body_subtype": {
+            "$ref": "#/components/schemas/BodySubtype"
+          },
+          "body_gravity": {
+            "description": "Planetetary stationss only.  Gravity of the planet the station is on, as a ratio of the gravity of Earth.",
+            "type": "number",
+            "minimum": 0
+          },
+          "body_has_rings": {
+            "description": "Planetary stations only.  Whether the bodt the station is on has rings or not.",
+            "type": "boolean"
+          },
+          "name": {
+            "description": "Name of the station.",
+            "type": "string"
+          },
+          "carrier_name": {
+            "description": "Fleet Carriers only.  Carrier name of the station.",
+            "type": "string"
+          },
+          "real_name": {
+            "description": "Real name of the station (for stations under construction for instance).",
+            "type": "string"
+          },
+          "allegiance": {
+            "description": "Allegiance of the station.",
+            "$ref": "#/components/schemas/Allegiance"
+          },
+          "government": {
+            "description": "Government type of the station.",
+            "$ref": "#/components/schemas/Government"
+          },
+          "services": {
+            "description": "Servies provided by the station.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Service"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "has_large_pad": {
+            "description": "Does the station have a large landing pad?",
+            "type": "boolean"
+          },
+          "has_market": {
+            "description": "Does the station have a market?",
+            "type": "boolean"
+          },
+          "has_shipyard": {
+            "description": "Does the station have a shipyard?",
+            "type": "boolean"
+          },
+          "has_outfitting": {
+            "description": "Does the station have a outfitting?",
+            "type": "boolean"
+          },
+          "is_dssa_carrier": {
+            "description": "Is this a DSSA approved player carrier?",
+            "type": "boolean"
+          },
+          "large_pads": {
+            "description": "Numer of large landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "medium_pads": {
+            "description": "Numer of medium landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "small_pads": {
+            "description": "Numer of small landing pads of the station.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "type": {
+            "description": "Type of the station.",
+            "$ref": "#/components/schemas/StationType"
+          },
+          "state": {
+            "$ref": "#/components/schemas/StationState"
+          },
+          "latitude": {
+            "description": "Planetary stations only.  Latitude of the station.",
+            "type": "number"
+          },
+          "longitude": {
+            "description": "Planetary stations only.  Longitude of the station.",
+            "type": "number"
+          },
+          "distance_to_arrival": {
+            "description": "Distance to the system arrival point of the station, measured in Kilometres.",
+            "type": "number",
+            "minimum": 0
+          },
+          "controlling_minor_faction": {
+            "description": "Controlling faction of the station.",
+            "type": "string"
+          },
+          "controlling_minor_faction_state": {
+            "description": "State of the controlling faction of the station.",
+            "type": "string"
+          },
+          "controlling_minor_faction_influence": {
+            "$ref": "#/components/schemas/Influence"
+          },
+          "carrier_docking_access": {
+            "description": "Carrier only.  Access control of the station.",
+            "type": "string"
+          },
+          "primary_economy": {
+            "description": "Primary economy for the station.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "secondary_economy": {
+            "description": "Secondary economy for the station.",
+            "$ref": "#/components/schemas/Economy"
+          },
+          "economies": {
+            "description": "All econommies for the station, mapping each economy as a proportion of the stations economies.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Economy"
+                },
+                "share": {
+                  "description": "Share of the total economy of the station this economy has.",
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "name",
+                "share"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "export_commodities": {
+            "description": "Commodities which the station exports.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Commodity"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "prohibited_commodities": {
+            "description": "Commodities which are illegal in the station.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Commodity"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "import_commodities": {
+            "description": "Commodities which the station imports.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Commodity"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "shipyard_updated_at": {
+            "description": "The timestamp that the shipyard on the station was last updated, in UTC.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "ships": {
+            "description": "Ships that can be bought at the station.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/Ship"
+                },
+                "symbol": {
+                  "description": "Frontier symbol identifier of the ship.",
+                  "type": "string"
+                },
+                "price": {
+                  "description": "Price of the ship",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "symbol"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "outfitting_updated_at": {
+            "description": "The timestamp that the outfitting on the station was last updated, in UTC.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "modules": {
+            "description": "Ships that can be bought at the station.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/components/schemas/ModuleName"
+                },
+                "category": {
+                  "$ref": "#/components/schemas/ModuleCategory"
+                },
+                "class": {
+                  "$ref": "#/components/schemas/ModuleClass"
+                },
+                "rating": {
+                  "$ref": "#/components/schemas/ModuleRating"
+                },
+                "ed_symbol": {
+                  "description": "Frontier symbol identifier of the module.",
+                  "type": "string"
+                },
+                "mass": {
+                  "description": "Mass of the module",
+                  "type": "integer"
+                },
+                "power": {
+                  "description": "Power draw of the module",
+                  "type": "integer"
+                },
+                "price": {
+                  "description": "Price of the module",
+                  "type": "integer"
+                },
+                "weapon_mode": {
+                  "$ref": "#/components/schemas/ModuleWeaponMode"
+                },
+                "ship": {
+                  "$ref": "#/components/schemas/Ship"
+                }
+              },
+              "required": [
+                "name",
+                "category",
+                "class",
+                "rating",
+                "ed_symbol"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "market_updated_at": {
+            "description": "The timestamp that the maret on the station was last updated, in UTC.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "market": {
+            "description": "Commodity market information about the station.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "commodity": {
+                  "$ref": "#/components/schemas/Commodity"
+                },
+                "category": {
+                  "$ref": "#/components/schemas/CommodityCategory"
+                },
+                "supply": {
+                  "description": "Supply for the commodity.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "demand": {
+                  "description": "Demand for the commodity.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "buy_price": {
+                  "description": "Price the player can buy the commodity for.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "sell_price": {
+                  "description": "Price the player can sell the commodity for.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "is_rare": {
+                  "description": "Whether the commodeity is rare or not?",
+                  "type": "boolean"
+                },
+                "is_home_station": {
+                  "description": "If the commodity is rare, is this station the home station it can be found at?",
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "commodity",
+                "category",
+                "supply",
+                "demand",
+                "buy_price",
+                "sell_price"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "material_trader": {
+            "description": "Type of trader that can be found at the station.",
+            "type": "string",
+            "enum": [null,"Encoded","Manufactured","Raw"],
+            "nullable": true
+          },
+          "technology_broker": {
+            "description": "Type of technology broker that can be found at the station.",
+            "type": "string",
+            "enum": [null,"Guardian","Human"],
+            "nullable": true
+          }
+        },
+        "required": [
+          "market_id",
+          "system_name",
+          "system_id64",
+          "system_x",
+          "system_y",
+          "system_z",
+          "has_large_pad",
+          "is_planetary",
+          "name"
+        ],
+        "additionalProperties": false
       }
     }
   }

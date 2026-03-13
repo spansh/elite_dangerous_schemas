@@ -23,3 +23,4 @@ testem.log
 /dist
 
 /build_all_schemas.sh
+/*.html
