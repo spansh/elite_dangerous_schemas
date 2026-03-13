@@ -1,0 +1,51 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Spansh API",
+    "description": "API documentation for [https://downloads.spansh.co.uk/](https://downloads.spansh.co.uk/).",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://downloads.spansh.co.uk",
+      "description": "Spansh download server"
+    }
+  ],
+  "paths": {
+    "/{filename}": {
+      "get": {
+        "summary": "Fetch all relevant data for the galaxy in the dump file.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "filename",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "Filename of the galaxy dump."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "./model.openapi.json#/components/schemas/MultiDumpSystem"
+                    },
+                    {
+                      "$ref": "./model.openapi.json#/components/schemas/MultiBriefDumpSystem"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

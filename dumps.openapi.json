@@ -1,0 +1,58 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Spansh API",
+    "description": "API documentation for [https://downloads.spansh.co.uk/](https://downloads.spansh.co.uk/).",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://downloads.spansh.co.uk/",
+      "description": "Spansh galaxy downloads"
+    }
+  ],
+  "paths": {
+    "/galaxy.json.gz": {
+      "get": {
+        "summary": "Fetch all relevant data in the galaxy",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "description": "Dumps of the galaxy data available at https://spansh.co.uk/dumps",
+                  "items": {
+                    "$ref": "./model.openapi.json#/components/schemas/DumpSystem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/systems.json.gz": {
+      "get": {
+        "summary": "Fetch system list in the galaxy",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "description": "Dumps of the system data available at https://spansh.co.uk/dumps",
+                  "items": {
+                    "$ref": "./model.openapi.json#/components/schemas/BriefSystem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# dependencies
+/node_modules/
+
+# misc
+/.svn
+/.env*
+/.pnp*
+/.eslintcache
+/coverage/
+/libpeerconnection.log
+npm-debug.log*
+testem.log
+*.swp
+/npm-debug.log*
+/testem.log
+/yarn-error.log
+
+# scripts
+/start_container.sh
+/*.bundle.openapi.json
+/*.old.schema.json
+
+/dist
+
+/build_all_schemas.sh
