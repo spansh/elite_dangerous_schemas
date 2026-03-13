@@ -191,7 +191,7 @@
               "minimum": 0
             },
             "required": true,
-            "description": "Market ID64 of the station , a 64 bit unsigned integer."
+            "description": "Market ID64 of the station, a 64 bit unsigned integer."
           }
         ],
         "summary": "Fetch all relevant data for a particular station in the galaxy",
