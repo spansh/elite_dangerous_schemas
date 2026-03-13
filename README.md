@@ -6,18 +6,19 @@ A set of schemas to help dealing with data produced by https://spansh.co.uk/
 
 These schema files can be used to validate the data which can be downloaded from https://spansh.co.uk/.  The most recent version of these schemas can always be downloaded from the following links.
 
-* https://downloads.spansh.co.uk/schemas/galaxy.schema.json
-* https://downloads.spansh.co.uk/schemas/systems.schema.json
+* <https://docs.spansh.co.uk/api.openapi.json> OpenAPI 3.1
+* <https://docs.spansh.co.uk/model.openapi.json> OpenAPI 3.1
+* <https://docs.spansh.co.uk/systems.schema.json> JSON Schema Draft 4
+* <https://docs.spansh.co.uk/galaxy.schema.json> JSON Schema Draft 4
 
-However, specific versions of each of these schemas can be downloaded via the following links.
+However, old versions of each of these schemas can be downloaded via the putting the relevant values into following link.
 
-* <https://downloads.spansh.co.uk/schemas/[version]/galaxy.schema.json>
-* <https://downloads.spansh.co.uk/schemas/[version]/systems.schema.json>
+* <https://docs.spansh.co.uk/[version]/[file]>
 
 For example
 
-* https://downloads.spansh.co.uk/schemas/1.0.1/galaxy.schema.json
-* https://downloads.spansh.co.uk/schemas/1.0.1/systems.schema.json
+* https://docs.spansh.co.uk/2.0.1/galaxy.schema.json
+* https://docs.spansh.co.uk/2.1.0/api.openapi.json
 
 ## Usage
 
@@ -55,11 +56,24 @@ Major versions will contain breaking changes.
 * 1.5.1
     * Updated descriptions of faction states
     * Removed duplicated type attribute
+* 2.0.0
+    * Converted schemas to OpenAPI 3.1
+    * Added description of /dump/{id64}
+    * Added description of /system/{id64}
+    * Added description of /body/{id64}
+    * Added tests for each of the schemas
+    * Created downgrade scripts to convert the OpenAPI 3.1 to JSON Schema Draft 4
+* 2.1.0
+    * Added description of /system/{marketId}
+    * Recovered test files
+* 2.1.1
+    * Updated README.md to reflect current values
 
 ## See Also
 
 * [Elite: Dangerous Index](https://spansh.co.uk)
 * [Galaxy Dumps](https://spansh.co.uk/dumps)
+* [Spansh API Documentation](https://docs.spansh.co.uk/)
 * [Elite: Dangerous Commnunity Developers Discord](https://discord.gg/RyHVFcF)
 * [JSON schema](https://json-schema.org/)
 * [AJV schema validator](https://ajv.js.org/)
