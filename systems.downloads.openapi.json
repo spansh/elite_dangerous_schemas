@@ -32,8 +32,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                    "$ref": "./model.openapi.json#/components/schemas/MultiBriefDumpSystem"
-                  ]
+                  "$ref": "./model.openapi.json#/components/schemas/MultiBriefDumpSystem"
                 }
               }
             }
