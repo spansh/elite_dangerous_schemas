@@ -10,6 +10,7 @@ These schema files can be used to validate the data which can be downloaded from
 * <https://docs.spansh.co.uk/model.openapi.json> OpenAPI 3.1
 * <https://docs.spansh.co.uk/systems.schema.json> JSON Schema Draft 4
 * <https://docs.spansh.co.uk/galaxy.schema.json> JSON Schema Draft 4
+* <https://docs.spansh.co.uk/factions.schema.json> JSON Schema Draft 4
 
 However, old versions of each of these schemas can be downloaded via the putting the relevant values into following link.
 
@@ -68,6 +69,10 @@ Major versions will contain breaking changes.
     * Recovered test files
 * 2.1.1
     * Updated README.md to reflect current values
+* 2.2.0
+    * Added Lynx Highliner
+    * Added Mk II Passenger Cabins
+    * Added schema for faction download
 
 ## See Also
 
