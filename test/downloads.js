@@ -17,6 +17,10 @@ const requests = [
   {
     method: 'get',
     path: '/systems_1day.json'
+  },
+  {
+    method: 'get',
+    path: '/factions.json'
   }
 ];
 

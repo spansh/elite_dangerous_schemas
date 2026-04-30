@@ -18,9 +18,9 @@
         "enum": ["Fixed","Gimbal","Turret"]
       },
       "ModuleName": {
-        "description": "Nameof the module.",
+        "description": "Name of the module.",
         "type": "string",
-        "enum": ["Power Distributor","Fuel Scoop","Sensors","Life Support","Shield Cell Bank","Auto Field-Maintenance Unit","Power Plant","Shield Generator","Thrusters","Frame Shift Drive","Frame Shift Drive (SCO)","Lightweight Alloy","Reinforced Alloy","Refinery","Military Grade Composite","Prospector Limpet Controller","Frame Shift Drive Interdictor","Hatch Breaker Limpet Controller","Fuel Transfer Limpet Controller","Collector Limpet Controller","Repair Limpet Controller","Reactive Surface Composite","Mirrored Surface Composite","Cargo Rack","Beam Laser","Hull Reinforcement Package","Planetary Vehicle Hangar","Module Reinforcement Package","Multi-Cannon","Pulse Laser","Fuel Tank","Burst Laser","Bi-Weave Shield Generator","Cannon","Fragment Cannon","Shield Booster","Sub-Surface Displacement Missile","Mining Laser","Seeker Missile Rack","Recon Limpet Controller","Cargo Scanner","Kill Warrant Scanner","Missile Rack","Economy Class Passenger Cabin","Frame Shift Wake Scanner","Torpedo Pylon","Pulse Wave Analyser","Rail Gun","Prismatic Shield Generator","Fighter Hangar","Plasma Accelerator","Business Class Passenger Cabin","Mine Launcher","Abrasion Blaster","Xeno Multi Limpet Controller","Seismic Charge Launcher","Mk II Cargo Rack","Decontamination Limpet Controller","Mining Multi Limpet Controller","Operations Multi Limpet Controller","Rescue Multi Limpet Controller","First Class Passenger Cabin","Detailed Surface Scanner","Chaff Launcher","Heat Sink Launcher","Standard Docking Computer","Supercruise Assist","Electronic Countermeasure","Research Limpet Controller","Advanced Planetary Approach Suite","Advanced Docking Computer","AX Multi-Cannon","Shock Mine Launcher","AX Missile Rack","Planetary Approach Suite","Meta Alloy Hull Reinforcement","Mk II Mining Multi-Limpet Controller","Luxury Class Passenger Cabin","Point Defence","Enhanced AX Multi-Cannon","Mining Volley Repeater","Remote Release Flak Launcher","Universal Multi Limpet Controller","Mk II Supercharge Optimised Frame Shift Drive (SCO)","Mk II Gravity Optimised Thrusters","Mk II Plasma Shock Accelerator","Xeno Scanner","Shutdown Field Neutraliser","Imperial Hammer Rail Gun","Pack-Hound Missile Rack","Enforcer Cannon","Advanced Plasma Accelerator","Retributor Beam Laser","Pulse Disruptor Laser","Concord Cannon","Rocket Propelled FSD Disruptor","Pacifier Frag-Cannon","Mining Lance","Cytoscrambler Burst Laser","Thargoid Pulse Neutraliser","Enhanced Xeno Scanner","Mk II Agile Boost Thrusters","Advanced Multi-Cannon","Mk II Ablative Lightweight Alloys","Mk II Ablative Reinforced Alloys","Mk II Ablative Military Grade Composite","Mk II Ablative Reactive Surface Composite","Mk II Ablative Mirrored Surface Composite","Shock Cannon","Advanced Missile Rack","Enhanced AX Missile Rack","Corrosion Resistant Cargo Rack","Guardian Shield Reinforcement","Experimental Weapon Stabiliser","Guardian Hull Reinforcement","Guardian Module Reinforcement","Remote Release Flechette Launcher","Guardian Hybrid Power Distributor","Guardian Hybrid Power Plant","Guardian Shard Cannon","Guardian Nanite Torpedo Pylon","Guardian Plasma Charger","Guardian FSD Booster","Caustic Sink Launcher","Pulse Wave Xeno Scanner","Sub-Surface Extraction Missile","Enzyme Missile Rack","Guardian Gauss Cannon","Enhanced Performance Thrusters"]
+        "enum": ["Power Distributor","Fuel Scoop","Sensors","Life Support","Shield Cell Bank","Auto Field-Maintenance Unit","Power Plant","Shield Generator","Thrusters","Frame Shift Drive","Frame Shift Drive (SCO)","Lightweight Alloy","Reinforced Alloy","Refinery","Military Grade Composite","Prospector Limpet Controller","Frame Shift Drive Interdictor","Hatch Breaker Limpet Controller","Fuel Transfer Limpet Controller","Collector Limpet Controller","Repair Limpet Controller","Reactive Surface Composite","Mirrored Surface Composite","Cargo Rack","Beam Laser","Hull Reinforcement Package","Planetary Vehicle Hangar","Module Reinforcement Package","Multi-Cannon","Pulse Laser","Fuel Tank","Burst Laser","Bi-Weave Shield Generator","Cannon","Fragment Cannon","Shield Booster","Sub-Surface Displacement Missile","Mining Laser","Seeker Missile Rack","Recon Limpet Controller","Cargo Scanner","Kill Warrant Scanner","Missile Rack","Economy Class Passenger Cabin","Frame Shift Wake Scanner","Torpedo Pylon","Pulse Wave Analyser","Rail Gun","Prismatic Shield Generator","Fighter Hangar","Plasma Accelerator","Business Class Passenger Cabin","Mine Launcher","Abrasion Blaster","Xeno Multi Limpet Controller","Seismic Charge Launcher","Mk II Cargo Rack","Decontamination Limpet Controller","Mining Multi Limpet Controller","Operations Multi Limpet Controller","Rescue Multi Limpet Controller","First Class Passenger Cabin","Detailed Surface Scanner","Chaff Launcher","Heat Sink Launcher","Standard Docking Computer","Supercruise Assist","Electronic Countermeasure","Research Limpet Controller","Advanced Planetary Approach Suite","Advanced Docking Computer","AX Multi-Cannon","Shock Mine Launcher","AX Missile Rack","Planetary Approach Suite","Meta Alloy Hull Reinforcement","Mk II Mining Multi-Limpet Controller","Luxury Class Passenger Cabin","Point Defence","Enhanced AX Multi-Cannon","Mining Volley Repeater","Remote Release Flak Launcher","Universal Multi Limpet Controller","Mk II Supercharge Optimised Frame Shift Drive (SCO)","Mk II Gravity Optimised Thrusters","Mk II Plasma Shock Accelerator","Xeno Scanner","Shutdown Field Neutraliser","Imperial Hammer Rail Gun","Pack-Hound Missile Rack","Enforcer Cannon","Advanced Plasma Accelerator","Retributor Beam Laser","Pulse Disruptor Laser","Concord Cannon","Rocket Propelled FSD Disruptor","Pacifier Frag-Cannon","Mining Lance","Cytoscrambler Burst Laser","Thargoid Pulse Neutraliser","Enhanced Xeno Scanner","Mk II Agile Boost Thrusters","Advanced Multi-Cannon","Mk II Ablative Lightweight Alloys","Mk II Ablative Reinforced Alloys","Mk II Ablative Military Grade Composite","Mk II Ablative Reactive Surface Composite","Mk II Ablative Mirrored Surface Composite","Shock Cannon","Advanced Missile Rack","Enhanced AX Missile Rack","Corrosion Resistant Cargo Rack","Guardian Shield Reinforcement","Experimental Weapon Stabiliser","Guardian Hull Reinforcement","Guardian Module Reinforcement","Remote Release Flechette Launcher","Guardian Hybrid Power Distributor","Guardian Hybrid Power Plant","Guardian Shard Cannon","Guardian Nanite Torpedo Pylon","Guardian Plasma Charger","Guardian FSD Booster","Caustic Sink Launcher","Pulse Wave Xeno Scanner","Sub-Surface Extraction Missile","Enzyme Missile Rack","Guardian Gauss Cannon","Enhanced Performance Thrusters","Mk II Economy Class Passenger Cabin","Mk II Business Class Passenger Cabin"]
       },
       "ModuleClass": {
         "description": "Class of the module.",
@@ -40,7 +40,7 @@
       "Ship": {
         "description": "Ship restrictions for the module.",
         "type": "string",
-        "enum": ["Adder","Alliance Challenger","Alliance Chieftain","Alliance Crusader","Anaconda","Asp Explorer","Asp Scout","Beluga Liner","Caspian Explorer","Cobra MkIII","Cobra MkIV","Cobra MkV","Corsair","Diamondback Explorer","Diamondback Scout","Dolphin","Eagle","Federal Assault Ship","Federal Corvette","Federal Dropship","Federal Gunship","Fer-de-Lance","Hauler","Imperial Clipper","Imperial Courier","Imperial Cutter","Imperial Eagle","Keelback","Kestrel Mk II","Krait MkII","Krait Phantom","Mamba","Mandalay","Orca","Panther Clipper MkII","Python","Python MkII","Sidewinder","Type-10 Defender","Type-11 Prospector","Type-6 Transporter","Type-7 Transporter","Type-8 Transporter","Type-9 Heavy","Viper MkIII","Viper MkIV","Vulture"]
+        "enum": ["Adder","Alliance Challenger","Alliance Chieftain","Alliance Crusader","Anaconda","Asp Explorer","Asp Scout","Beluga Liner","Caspian Explorer","Cobra MkIII","Cobra MkIV","Cobra MkV","Corsair","Diamondback Explorer","Diamondback Scout","Dolphin","Eagle","Federal Assault Ship","Federal Corvette","Federal Dropship","Federal Gunship","Fer-de-Lance","Hauler","Imperial Clipper","Imperial Courier","Imperial Cutter","Imperial Eagle","Keelback","Kestrel Mk II","Krait MkII","Krait Phantom","Lynx Highliner","Mamba","Mandalay","Orca","Panther Clipper MkII","Python","Python MkII","Sidewinder","Type-10 Defender","Type-11 Prospector","Type-6 Transporter","Type-7 Transporter","Type-8 Transporter","Type-9 Heavy","Viper MkIII","Viper MkIV","Vulture"]
       },
       "Commodity": {
         "description": "Name of the commidity..",
@@ -2637,6 +2637,87 @@
           "name"
         ],
         "additionalProperties": false
+      },
+      "DumpFaction": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Name of the faction.",
+            "type": "string"
+          },
+          "allegiance": {
+            "description": "Allegiance of the faction.",
+            "$ref": "#/components/schemas/Allegiance"
+          },
+          "government": {
+            "description": "Government type of the faction.",
+            "$ref": "#/components/schemas/Government"
+          },
+          "systems": {
+            "description": "Systems which the faction has a presence in.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "systemName": {
+                  "description": "Name of the system the faction is present in.",
+                  "type": "string"
+                },
+                "systemId64": {
+                  "description": "The ID64 of the system the faction is present in.",
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "isControllingFaction": {
+                  "description": "Does the faction controls the system?",
+                  "type": "boolean"
+                },
+                "coords": {
+                  "description": "Coordinates of the system.",
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "description": "X coordinate of the system.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Y coordinate of the system.",
+                      "type": "number"
+                    },
+                    "z": {
+                      "description": "Z coordinate of the system.",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y",
+                    "z"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "systemName",
+                "systemId64",
+                "coords"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "systems"
+        ],
+        "additionalProperties": false
+      },
+      "MultiDumpFaction": {
+        "description": "Dump of multiple brief factions with one entry per faction.  Pretty printed to show one system per line.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DumpFaction"
+        }
       }
     }
   }

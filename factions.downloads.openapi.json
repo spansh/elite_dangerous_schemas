@@ -14,7 +14,7 @@
   "paths": {
     "/{filename}": {
       "get": {
-        "summary": "Fetch all relevant data for the galaxy in the dump file.",
+        "summary": "Fetch faction data for the galaxy in the dump file.",
         "parameters": [
           {
             "in": "path",
@@ -23,7 +23,7 @@
               "type": "string"
             },
             "required": true,
-            "description": "Filename of the galaxy dump."
+            "description": "Filename of the faction dump."
           }
         ],
         "responses": {
@@ -32,17 +32,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "./model.openapi.json#/components/schemas/MultiDumpSystem"
-                    },
-                    {
-                      "$ref": "./model.openapi.json#/components/schemas/MultiBriefDumpSystem"
-                    },
-                    {
-                      "$ref": "./model.openapi.json#/components/schemas/MultiDumpFaction"
-                    }
-                  ]
+                  "$ref": "./model.openapi.json#/components/schemas/MultiDumpFaction"
                 }
               }
             }

@@ -14,7 +14,7 @@
   "paths": {
     "/{filename}": {
       "get": {
-        "summary": "Fetch brief rdata for the galaxy in the dump file.",
+        "summary": "Fetch brief system data for the galaxy in the dump file.",
         "parameters": [
           {
             "in": "path",
@@ -23,7 +23,7 @@
               "type": "string"
             },
             "required": true,
-            "description": "Filename of the galaxy dump."
+            "description": "Filename of the system dump."
           }
         ],
         "responses": {
