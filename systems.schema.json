@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-0r47/schema",
-  "$id": "https://dowloads.spansh.co.uk/schema/systems.schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "$id": "https://docs.spansh.co.uk/schema/systems.schema.json",
   "title": "Spansh Systems",
   "description": "Full Systems files downloaded from https://spansh.co.uk/downloads",
   "definitions": {

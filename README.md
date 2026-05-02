@@ -73,6 +73,8 @@ Major versions will contain breaking changes.
     * Added Lynx Highliner
     * Added Mk II Passenger Cabins
     * Added schema for faction download
+* 2.3.0
+    * Fix broken $id and $schema
 
 ## See Also
 

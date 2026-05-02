@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
-  "$id": "https://dowloads.spansh.co.uk/schema/galaxy.schema.json",
+  "$id": "https://docs.spansh.co.uk/schema/galaxy.schema.json",
   "title": "Spansh Galaxy",
   "description": "Full Galaxy files downloaded from https://spansh.co.uk/downloads",
   "definitions": {
