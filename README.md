@@ -75,6 +75,13 @@ Major versions will contain breaking changes.
     * Added schema for faction download
 * 2.3.0
     * Fix broken $id and $schema
+* 2.3.1
+    * Added Commodity values
+    * Added Influence values
+    * Added Allegiance values
+* 2.3.2
+    * Added new Modules
+    * Added missing SpectralClass
 
 ## See Also
 
