@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
-  "$id": "https://docs.spansh.co.uk/schema/factions.schema.json",
+  "$id": "https://docs.spansh.co.uk/factions.schema.json",
   "title": "Spansh Systems",
   "description": "Full Faction files downloaded from https://spansh.co.uk/downloads"
 }
