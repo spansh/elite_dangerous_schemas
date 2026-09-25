@@ -86,6 +86,10 @@ Major versions will contain breaking changes.
     * Added new Modules
     * Added new Commodities
     * Added new Category mercgear
+* 3.0.0
+    * Now uses Redoc to generate JSONSchema bundles which makes $ref more readable
+    * Converted bash pipeline to script for readability and maintainability
+    * Fixed $refs which were linking too deeply in JSONSchema bundle
 
 ## See Also
 

@@ -54,23 +54,22 @@ function rewriteRefs(value) {
   return value;
 }
 
-function convertNullableStringEnums(value) {
+function convertNullableStrings(value) {
   if (Array.isArray(value)) {
-    return value.map(convertNullableStringEnums);
+    return value.map(convertNullableStrings);
   }
 
   if (value !== null && typeof value === 'object') {
     const converted = Object.fromEntries(
       Object.entries(value).map(([key, childValue]) => [
         key,
-        convertNullableStringEnums(childValue)
+        convertNullableStrings(childValue)
       ])
     );
 
     if (
       converted.nullable === true &&
-      converted.type === 'string' &&
-      Array.isArray(converted.enum)
+      converted.type === 'string'
     ) {
       converted.type = ['string', 'null'];
     }
@@ -109,7 +108,7 @@ export function convertToJsonSchema(schema, baseSchema = null) {
       .content['application/json']
       .schema;
 
-  const convertedDefinitions = convertNullableStringEnums(
+  const convertedDefinitions = convertNullableStrings(
     schema.components.schemas
   );
 
