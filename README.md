@@ -82,6 +82,10 @@ Major versions will contain breaking changes.
 * 2.3.2
     * Added new Modules
     * Added missing SpectralClass
+* 2.3.3
+    * Added new Modules
+    * Added new Commodities
+    * Added new Category mercgear
 
 ## See Also
 
