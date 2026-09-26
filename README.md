@@ -90,6 +90,9 @@ Major versions will contain breaking changes.
     * Now uses Redoc to generate JSONSchema bundles which makes $ref more readable
     * Converted bash pipeline to script for readability and maintainability
     * Fixed $refs which were linking too deeply in JSONSchema bundle
+* 3.0.1
+    * Release script
+    * Updated galaxy.schema.json, systems.schema.json and factions.schema.json in repository
 
 ## See Also
 
