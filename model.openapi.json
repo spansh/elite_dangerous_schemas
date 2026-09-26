@@ -144,7 +144,7 @@
             "name": {
               "description": "Type of the signal.",
               "type": "string",
-              "enum": ["Geological","Biological","Human","Thargoid","Guardian","Other","Serendibite","Painite","Rhodplumsite","Platinum","Monazite","Alexandrite","Bromellite","Low Temperature Diamonds","Musgravite","Void Opal","Benitoite","Grandidierite","Tritium","Major Anomaly"]
+              "enum": ["Geological","Biological","Human","Thargoid","Guardian","Other","Serendibite","Painite","Rhodplumsite","Platinum","Monazite","Alexandrite","Bromellite","Low Temperature Diamonds","Musgravite","Void Opal","Benitoite","Grandidierite","Tritium","Major Anomaly","Planetary Mining Location"]
             },
             "count": {
               "description": "Number of instances of the signal.",

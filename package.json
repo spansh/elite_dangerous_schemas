@@ -1,10 +1,11 @@
 {
   "name": "elite_dangerous_schemas",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "release": "./scripts/release.sh",
     "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 --recursive",
     "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/downloads.js",
     "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/api.js",
