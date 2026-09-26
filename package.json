@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "release": "./scripts/release.sh",
-    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 --recursive",
-    "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/downloads.js",
-    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/api.js",
+    "test": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 --recursive --parallel test/",
+    "test_downloads": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/downloads.cjs",
+    "test_api": "NODE_OPTIONS='--disable-warning=ExperimentalWarning' mocha --reporter-option maxDiffSize=4000000 test/api.cjs",
     "bundle_downloads_schema": "pnpm --package=@redocly/cli dlx redocly bundle galaxy.downloads.openapi.json --ext json  -o galaxy_downloads.bundle.openapi.json",
     "create_json_schema": "cat <(pnpm dlx node-jq 'del(.definitions, .type, .items)' galaxy.schema.json) <(pnpm dlx node-jq '.paths[\"/{filename}\"].get.responses[\"200\"].content[\"application/json\"].schema,{definitions:.components.schemas}' galaxy_downloads.bundle.openapi.json) |pnpm dlx node-jq -s add >galaxy.new.schema.json",
     "downgrade_merged_openapi": "bash -c \"pnpm --package=@apiture/openapi-down-convert dlx openapi-down-convert --input <(pnpm --package=@redocly/cli dlx redocly bundle  --ext json merged.downloads.openapi.json) --output merged.downloads.old.openapi.json\"",
