@@ -93,6 +93,8 @@ Major versions will contain breaking changes.
 * 3.1.0
     * Release script
     * Updated galaxy.schema.json, systems.schema.json and factions.schema.json in repository
+* 3.1.1
+    * Update base files in repo
 
 ## See Also
 

@@ -361,6 +361,7 @@ do
   pnpm dlx node-jq empty "${generated_file}" >/dev/null
 
   mv "${generated_file}" "${base_schema_file}"
+  git add "${base_schema_file}"
 done
 
 #
@@ -375,13 +376,6 @@ pnpm dlx node-jq \
   > "${package_tmp}"
 
 mv "${package_tmp}" package.json
-
-#
-# Clear the worktree index before staging release artifacts. This prevents
-# files that were staged in the original checkout from leaking into the
-# release commit.
-#
-git reset
 
 git add package.json
 
