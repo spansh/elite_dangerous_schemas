@@ -1515,6 +1515,7 @@
         "W9",
         "WC0",
         "WC2",
+        "WC2",
         "WC5",
         "WC6",
         "WN0",
@@ -1914,7 +1915,7 @@
           "minimum": 0
         },
         "radius": {
-          "description": "Planets only.  Radius of the planet, measured in Kilimetres.",
+          "description": "Planets only.  Radius of the planet, measured in Kilometres.",
           "type": "number",
           "minimum": 0
         },

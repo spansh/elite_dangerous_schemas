@@ -95,6 +95,9 @@ Major versions will contain breaking changes.
     * Updated galaxy.schema.json, systems.schema.json and factions.schema.json in repository
 * 3.1.1
     * Update base files in repo
+* 3.2.0
+    * Typos in descriptions
+    * Added WC3 type
 
 ## See Also
 
