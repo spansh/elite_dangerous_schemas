@@ -50,6 +50,33 @@ const requests = [
       },
       method: 'get',
       path: '/api/station/128666762'
+    },
+    {
+      // nearest_populated_distance
+      resultKey: 'record',
+      attributes: {
+        name: 'Gloaduae IK-A d1',
+      },
+      method: 'get',
+      path: '/api/system/44770561795'
+    },
+    {
+      // genuses
+      resultKey: 'record',
+      attributes: {
+        name: 'Plua Thua NY-R e4-0 B 10 b',
+      },
+      method: 'get',
+      path: '/api/body/900719927158146092'
+    },
+    {
+      // body_has_atmosphere
+      resultKey: 'record',
+      attributes: {
+        name: "Zel'dovich Hub",
+      },
+      method: 'get',
+      path: '/api/station/4324402435'
     }
 ];
 

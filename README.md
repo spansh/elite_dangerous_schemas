@@ -98,6 +98,10 @@ Major versions will contain breaking changes.
 * 3.2.0
     * Typos in descriptions
     * Added WC3 type
+* 3.3.0
+    * Added Formidine Rift region name (the game's name; The Formidine Rift is kept)
+    * Fixed the API model to match the API: nearest_populated_distance is a number, power_conflict_progress
+      entries name the power in power, genuses are objects with a name, and stations have body_has_atmosphere
 
 ## See Also
 

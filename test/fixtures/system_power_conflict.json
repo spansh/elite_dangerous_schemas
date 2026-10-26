@@ -1,0 +1,374 @@
+{
+  "record": {
+    "allegiance": "Empire",
+    "bodies": [
+      {
+        "distance_to_arrival": 0.0,
+        "estimated_mapping_value": 4618,
+        "estimated_scan_value": 1219,
+        "id": 44870666611,
+        "id64": 44870666611,
+        "is_main_star": true,
+        "name": "HIP 54641",
+        "subtype": "F (White) Star",
+        "type": "Star"
+      },
+      {
+        "distance_to_arrival": 362.16405,
+        "estimated_mapping_value": 56708,
+        "estimated_scan_value": 15608,
+        "id": 36028841889630579,
+        "id64": 36028841889630579,
+        "is_main_star": null,
+        "name": "HIP 54641 1",
+        "subtype": "High metal content world",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 621.413979,
+        "estimated_mapping_value": 50830,
+        "estimated_scan_value": 13990,
+        "id": 72057638908594547,
+        "id64": 72057638908594547,
+        "is_main_star": null,
+        "name": "HIP 54641 2",
+        "subtype": "High metal content world",
+        "terraforming_state": "Terraforming",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 1966.372359,
+        "estimated_mapping_value": 53616,
+        "estimated_scan_value": 14757,
+        "id": 108086435927558515,
+        "id64": 108086435927558515,
+        "is_main_star": null,
+        "name": "HIP 54641 3",
+        "subtype": "High metal content world",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 2727.342179,
+        "estimated_mapping_value": 54575,
+        "estimated_scan_value": 15021,
+        "id": 144115232946522483,
+        "id64": 144115232946522483,
+        "is_main_star": null,
+        "name": "HIP 54641 4",
+        "subtype": "High metal content world",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 3699.51886,
+        "estimated_mapping_value": 2221,
+        "estimated_scan_value": 500,
+        "id": 180144029965486451,
+        "id64": 180144029965486451,
+        "is_main_star": null,
+        "name": "HIP 54641 5",
+        "subtype": "Icy body",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 5093.783276,
+        "estimated_mapping_value": 2304,
+        "estimated_scan_value": 525,
+        "id": 252201624003414387,
+        "id64": 252201624003414387,
+        "is_main_star": null,
+        "name": "HIP 54641 6",
+        "subtype": "Icy body",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      },
+      {
+        "distance_to_arrival": 5086.572963,
+        "estimated_mapping_value": 2221,
+        "estimated_scan_value": 500,
+        "id": 288230421022378355,
+        "id64": 288230421022378355,
+        "is_main_star": null,
+        "landmark_value": 0,
+        "landmarks": [
+          {
+            "count": 2,
+            "subtype": "Settlement",
+            "type": "Surface Station",
+            "value": 0
+          }
+        ],
+        "name": "HIP 54641 6 a",
+        "subtype": "Icy body",
+        "terraforming_state": "Not terraformable",
+        "type": "Planet"
+      }
+    ],
+    "body_count": 8,
+    "controlling_minor_faction": "HIP 54641 Limited",
+    "controlling_minor_faction_state": "None",
+    "estimated_mapping_value": 227093,
+    "estimated_scan_value": 62120,
+    "government": "Corporate",
+    "id64": 44870666611,
+    "is_being_colonised": false,
+    "is_colonised": false,
+    "known_permit": false,
+    "landmark_value": 0,
+    "minor_faction_presences": [
+      {
+        "allegiance": "Independent",
+        "government": "Dictatorship",
+        "influence": 0.084915,
+        "name": "Allied HIP 54641 Movement",
+        "state": "None"
+      },
+      {
+        "active_states": [
+          "Bust",
+          "Civil Unrest"
+        ],
+        "allegiance": "Independent",
+        "government": "Cooperative",
+        "influence": 0.077922,
+        "name": "Dzivaruba One",
+        "state": "Civil Unrest"
+      },
+      {
+        "allegiance": "Empire",
+        "government": "Corporate",
+        "influence": 0.507492,
+        "name": "HIP 54641 Limited",
+        "state": "None"
+      },
+      {
+        "active_states": [
+          "Bust"
+        ],
+        "allegiance": "Independent",
+        "government": "Anarchy",
+        "influence": 0.00999,
+        "name": "HIP 54641 Purple Camorra",
+        "state": "Bust"
+      },
+      {
+        "allegiance": "Independent",
+        "government": "Corporate",
+        "influence": 0.103896,
+        "name": "HIP 54641 Silver Life Industry",
+        "state": "None"
+      },
+      {
+        "allegiance": "Independent",
+        "government": "Cooperative",
+        "influence": 0.100899,
+        "name": "Jaara One",
+        "state": "None"
+      },
+      {
+        "allegiance": "Independent",
+        "government": "Democracy",
+        "influence": 0.114885,
+        "name": "Movement for HIP 54641 for Equality",
+        "state": "None"
+      }
+    ],
+    "name": "HIP 54641",
+    "needs_permit": false,
+    "population": 154615,
+    "power": [
+      "A. Lavigny-Duval",
+      "Aisling Duval",
+      "Felicia Winters"
+    ],
+    "power_conflict_progress": [
+      {
+        "power": "A. Lavigny-Duval",
+        "progress": 0.057675
+      },
+      {
+        "power": "Aisling Duval",
+        "progress": 0.042592
+      },
+      {
+        "power": "Felicia Winters",
+        "progress": 0.017017
+      }
+    ],
+    "power_state": "Unoccupied",
+    "primary_economy": "Terraforming",
+    "region": "Inner Orion Spur",
+    "secondary_economy": "Extraction",
+    "security": "Medium",
+    "stations": [
+      {
+        "controlling_minor_faction": "HIP 54641 Limited",
+        "controlling_minor_faction_state": "Expansion",
+        "distance_to_arrival": 621.406755,
+        "has_large_pad": false,
+        "has_market": true,
+        "large_pads": 0,
+        "market_id": 3230188032,
+        "medium_pads": 1,
+        "name": "O'Brien Enterprise",
+        "services": [
+          "Dock",
+          "Autodock",
+          "Market",
+          "Contacts",
+          "Universal Cartographics",
+          "Missions",
+          "Refuel",
+          "Repair",
+          "Tuning",
+          "Workshop",
+          "Missions Generated",
+          "Flight Controller",
+          "Station Operations",
+          "Powerplay",
+          "Search and Rescue",
+          "Station Menu",
+          "Social Space",
+          "Bartender",
+          "Pioneer Supplies",
+          "Apex Interstellar",
+          "System Colonisation"
+        ],
+        "small_pads": 2,
+        "type": "Outpost"
+      },
+      {
+        "controlling_minor_faction": "HIP 54641 Limited",
+        "controlling_minor_faction_state": "Expansion",
+        "distance_to_arrival": 362.267257,
+        "has_large_pad": false,
+        "has_market": true,
+        "has_outfitting": true,
+        "large_pads": 0,
+        "market_id": 3230188288,
+        "medium_pads": 1,
+        "name": "Linaweaver Platform",
+        "services": [
+          "Dock",
+          "Autodock",
+          "Market",
+          "Contacts",
+          "Universal Cartographics",
+          "Missions",
+          "Outfitting",
+          "Crew Lounge",
+          "Refuel",
+          "Repair",
+          "Tuning",
+          "Workshop",
+          "Missions Generated",
+          "Flight Controller",
+          "Station Operations",
+          "Powerplay",
+          "Search and Rescue",
+          "Station Menu",
+          "Livery",
+          "Social Space",
+          "Bartender",
+          "Pioneer Supplies",
+          "Apex Interstellar",
+          "System Colonisation"
+        ],
+        "small_pads": 2,
+        "type": "Outpost"
+      },
+      {
+        "controlling_minor_faction": "HIP 54641 Limited",
+        "controlling_minor_faction_state": "Expansion",
+        "distance_to_arrival": 5041.973479,
+        "has_large_pad": false,
+        "has_market": true,
+        "large_pads": 0,
+        "market_id": 3848465408,
+        "medium_pads": 0,
+        "name": "Barrera Mining Prospect",
+        "services": [
+          "Dock",
+          "Autodock",
+          "Market",
+          "Contacts",
+          "Missions",
+          "Refuel",
+          "Repair",
+          "Workshop",
+          "Missions Generated",
+          "Flight Controller",
+          "Station Operations",
+          "Search and Rescue",
+          "Station Menu"
+        ],
+        "small_pads": 1,
+        "type": "Settlement"
+      }
+    ],
+    "synthesis_recipes": [
+      {
+        "level": "Basic",
+        "name": "AX Remote Flak Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Configurable Explosive Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Configurable Small Calibre Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Explosive Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Large Calibre Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Life Support"
+      },
+      {
+        "level": "Basic",
+        "name": "Limpets"
+      },
+      {
+        "level": "Basic",
+        "name": "Plasma Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "Small Calibre Munitions"
+      },
+      {
+        "level": "Basic",
+        "name": "SRV Ammo"
+      },
+      {
+        "level": "Basic",
+        "name": "SRV Refuel"
+      },
+      {
+        "level": "Basic",
+        "name": "SRV Repair"
+      },
+      {
+        "level": "Basic",
+        "name": "Sub-Surface Displacement Munitions"
+      }
+    ],
+    "thargoid_war_failure_state": "None",
+    "thargoid_war_state": "None",
+    "thargoid_war_success_state": "None",
+    "updated_at": "2026-10-21T23:20:14Z",
+    "x": 162.90625,
+    "y": -14.6875,
+    "z": 69.25
+  }
+}

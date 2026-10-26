@@ -188,8 +188,18 @@
       "Genuses": {
         "type": "array",
         "items": {
-          "type": "string",
-          "enum": ["Aleoids","Amphora Plants","Anemones","Bacterial","Bark Mounds","Brain Trees","Cactoids","Clypeus","Conchas","Crystalline Shards","Electricae","Fonticulus","Fumerolas","Fungoids","Osseus","Recepta","Shrubs","Stratum","Tubers","Tubus","Tussocks"]
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the genus.",
+              "type": "string",
+              "enum": ["Aleoids","Amphora Plants","Anemones","Bacterial","Bark Mounds","Brain Trees","Cactoids","Clypeus","Conchas","Crystalline Shards","Electricae","Fonticulus","Fumerolas","Fungoids","Osseus","Recepta","Shrubs","Stratum","Tubers","Tubus","Tussocks"]
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
         }
       },
       "Security": {
@@ -219,7 +229,7 @@
       },
       "Region": {
         "type": "string",
-        "enum": ["Acheron","Achilles's Altar","Aquila's Halo","Arcadian Stream","Dryman's Point","Elysian Shore","Empyrean Straits","Errant Marches","Formorian Frontier","Galactic Centre","Hawking's Gap","Hieronymus Delta","Inner Orion Spur","Inner Orion-Perseus Conflux","Inner Scutum-Centaurus Arm","Izanami","Kepler's Crest","Lyra's Song","Mare Somnia","Newton's Vault","Norma Arm","Norma Expanse","Odin's Hold","Orion-Cygnus Arm","Outer Arm","Outer Orion Spur","Outer Orion-Perseus Conflux","Outer Scutum-Centaurus Arm","Perseus Arm","Ryker's Hope","Sagittarius-Carina Arm","Sanguineous Rim","Temple","Tenebrae","The Abyss","The Conduit","The Formidine Rift","The Veils","The Void","Trojan Belt","Vulcan Gate","Xibalba"]
+        "enum": ["Acheron","Achilles's Altar","Aquila's Halo","Arcadian Stream","Dryman's Point","Elysian Shore","Empyrean Straits","Errant Marches","Formidine Rift","Formorian Frontier","Galactic Centre","Hawking's Gap","Hieronymus Delta","Inner Orion Spur","Inner Orion-Perseus Conflux","Inner Scutum-Centaurus Arm","Izanami","Kepler's Crest","Lyra's Song","Mare Somnia","Newton's Vault","Norma Arm","Norma Expanse","Odin's Hold","Orion-Cygnus Arm","Outer Arm","Outer Orion Spur","Outer Orion-Perseus Conflux","Outer Scutum-Centaurus Arm","Perseus Arm","Ryker's Hope","Sagittarius-Carina Arm","Sanguineous Rim","Temple","Tenebrae","The Abyss","The Conduit","The Formidine Rift","The Veils","The Void","Trojan Belt","Vulcan Gate","Xibalba"]
       },
       "CurrentFactionState": {
         "description": "Current states for a faction.",
@@ -1457,7 +1467,7 @@
           },
           "nearest_populated_distance": {
             "description": "Distance in LY to the nearest populated system.",
-            "type": "integer",
+            "type": "number",
             "minimum": 0
           },
           "nearest_populated_id64": {
@@ -1609,7 +1619,7 @@
             "items": {
               "type": "object",
               "properties": {
-                "name": {
+                "power": {
                   "description": "Name of the power involved in the conflict.",
                   "$ref": "#/components/schemas/Power"
                 },
@@ -1620,7 +1630,7 @@
                 }
               },
               "required": [
-                "name",
+                "power",
                 "progress"
               ],
               "additionalProperties": false
@@ -2281,8 +2291,12 @@
             "type": "number",
             "minimum": 0
           },
+          "body_has_atmosphere": {
+            "description": "Planetary stations only.  Whether the body the station is on has an atmosphere or not.",
+            "type": "boolean"
+          },
           "body_has_rings": {
-            "description": "Planetary stations only.  Whether the bodt the station is on has rings or not.",
+            "description": "Planetary stations only.  Whether the body the station is on has rings or not.",
             "type": "boolean"
           },
           "name": {
@@ -2722,3 +2736,4 @@
     }
   }
 }
+
